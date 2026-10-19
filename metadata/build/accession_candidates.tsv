@@ -1,0 +1,66 @@
+study_id	accession	source
+Buzzicotti2026	GSE318738	paper (PMC full text); NCBI PubMed link
+Buzzicotti2026	PRJNA1419854	NCBI PubMed link
+Li2026a	PRJNA1261883	paper (PMC full text)
+Braynen2025	PRJNA883413	paper
+Braynen2025	GSE312408	paper; NCBI PubMed link
+Braynen2025	GSE312411	paper; NCBI PubMed link
+Huang2025	GSE280353	paper (PMC full text); NCBI PubMed link
+Huang2025	GSE280342	NCBI PubMed link
+Huang2025	GSE280343	NCBI PubMed link
+Huang2025	GSE280344	NCBI PubMed link
+Huang2025	GSE280345	NCBI PubMed link
+Huang2025	GSE280346	NCBI PubMed link
+Li2025	PRJCA044786	paper (PMC full text)
+Li2025	PRJDB39160	BioProject search (title cites PRJCA044786)
+Wang2025b	PRJNA1140906	paper (PMC full text)
+Cao2024	GSE227472	paper; NCBI PubMed link
+Rosman2024	PRJNA1047090	paper (PMC full text)
+Wu2024	PRJNA836413	SRA search (CAU, 36 runs)
+Hu2026	PRJNA1057030	BioProject search (BIG CAS, Xu178)
+Hu2026	PRJNA1058198	BioProject search (BIG CAS, root tips N supply)
+Hu2026	PRJNA1058201	BioProject search (BIG CAS)
+Guo2023	CRA009546	paper (PMC full text)
+Jia2023	CRA012157	paper
+Li2023a	SRP341978	paper (PMC full text)
+Ning2023	PRJNA602742	paper
+Ning2023	PRJNA837716	paper
+AlonsoNieves2022	PRJNA669055	paper
+AlonsoNieves2022	SRP287300	paper
+TorresRodriguez2021	PRJNA669055	paper
+Guo2022	GSE107562	paper (PMC full text)
+Guo2022	GSE111425	paper (PMC full text)
+Guo2022	GSE99638	GEO search (same group, leaf low N GA)
+Li2022	GSE183171	GEO search (scRNA-seq maize root)
+Li2022	PRJNA757195	BioProject search (scRNA-seq maize root)
+Li2022	PRJNA759548	BioProject search (scRNA-seq maize root)
+Singh2022	PRJNA731645	paper (PMC full text)
+Wang2022	PRJNA858579	paper
+Buoso2021	GSE167027	paper (PMC full text); NCBI PubMed link
+Cheng2021	GSE152249	paper (PMC full text); NCBI PubMed link
+Du2021	PRJNA609156	BioProject search (title match Qi319 Ye478)
+Ma2021a	PRJNA661965	paper
+Ma2021a	PRJNA662035	paper
+Ravazzolo2021a	GSE162411	paper; NCBI PubMed link
+Ravazzolo2021b	GSE173102	paper (PMC full text); NCBI PubMed link
+Ge2020	PRJNA494286	paper
+Meng2020	PRJNA541335	paper
+Ravazzolo2020	GSE141860	NCBI PubMed link
+Wang2020a	PRJNA587226	paper (PMC full text)
+Du2020	PRJNA543165	BioProject search (nitrate related genes)
+Du2020	PRJNA607122	BioProject search (nitrate treatment roots)
+Du2020	PRJNA556506	BioProject search (N response roots)
+Wang2019	PRJNA506798	paper
+Mager2018	SRP135301	paper
+Mu2017	GSE107562	paper; NCBI PubMed link
+He2016	PRJNA304223	paper (PMC full text)
+Lv2016	SRP059655	paper
+Yu2016	SRP062897	paper (PMC web page)
+Yu2016	PRJNA294044	BioProject search (Bonn 2015)
+Chen2015	SRP052559	paper
+Pan2015	GSE59613	paper; NCBI PubMed link
+Trevisan2015	PRJNA230837	BioProject search (Verona, urea nitrate)
+Yu2015	SRP058076	paper (PMC web page)
+Yu2015	PRJNA283053	catalogue lead
+Yu2015	SRX1020537	catalogue lead
+Bi2014	SRP033653	paper

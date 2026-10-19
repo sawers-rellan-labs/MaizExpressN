@@ -1,0 +1,4 @@
+study_id	item	question	proposed_answer	evidence
+Lv2016	no replication	Only one library per N level (2 runs). No within-study variance estimate is possible.	Keep include = TRUE; flag the contrast as unreplicated (SE not estimable from this study alone).	accessions_resolved.tsv (2 runs); PMC4865003 Results (two datasets, ~15 Gb SN and ~13 Gb LN); qPCR used 3 independent replicates.
+Lv2016	stage mismatch	BioSample dev_stage is V7 for SN but V8 for LN; the paper says leaves were sampled at V7 for both.	Use V7 (paper).	runs.tsv biosample_attributes for SAMN03782434/5; PMC4865003 Methods.
+Lv2016	library type	Libraries are rRNA-depleted total RNA (RiboMinus), unlike the polyA libraries of most studies; gene-level fold changes should still be comparable but intronic/ncRNA reads are higher.	Keep; record library type in the contrast or study notes.	PMC4865003 Methods (RNA extraction, rRNA depletion and total RNA-seq).

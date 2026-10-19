@@ -1,0 +1,5 @@
+sample,fastq_1,fastq_2,strandedness
+Li2022_plusNO3_R1,/share/maize/rrellan/MaizExpressN/fastq/Li2022/SRR17859242_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Li2022/SRR17859242_2.fastq.gz,auto
+Li2022_plusNO3_R2,/share/maize/rrellan/MaizExpressN/fastq/Li2022/SRR17859243_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Li2022/SRR17859243_2.fastq.gz,auto
+Li2022_minusNO3_R1,/share/maize/rrellan/MaizExpressN/fastq/Li2022/SRR17859244_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Li2022/SRR17859244_2.fastq.gz,auto
+Li2022_minusNO3_R2,/share/maize/rrellan/MaizExpressN/fastq/Li2022/SRR17859245_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Li2022/SRR17859245_2.fastq.gz,auto

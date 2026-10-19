@@ -1,0 +1,4 @@
+run	url	md5	dest
+SRR14300954	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR143/054/SRR14300954/SRR14300954.fastq.gz	0d00c8509729e5352a0ee2d7198a880f	/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021b/SRR14300954.fastq.gz
+SRR14300955	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR143/055/SRR14300955/SRR14300955.fastq.gz	5f6a0cf01abb08cf201a2b34b6b31f97	/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021b/SRR14300955.fastq.gz
+SRR14300956	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR143/056/SRR14300956/SRR14300956.fastq.gz	f098c38966d0e48752f22e41c72781e7	/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021b/SRR14300956.fastq.gz

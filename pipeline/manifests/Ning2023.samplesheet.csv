@@ -1,0 +1,7 @@
+sample,fastq_1,fastq_2,strandedness
+Ning2023_DN_R3,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954070_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954070_2.fastq.gz,auto
+Ning2023_DN_R2,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954071_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954071_2.fastq.gz,auto
+Ning2023_DN_R1,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954072_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954072_2.fastq.gz,auto
+Ning2023_SN_R3,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954073_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954073_2.fastq.gz,auto
+Ning2023_SN_R2,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954074_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954074_2.fastq.gz,auto
+Ning2023_SN_R1,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954075_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ning2023/SRR10954075_2.fastq.gz,auto

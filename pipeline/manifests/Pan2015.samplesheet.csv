@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2,strandedness
+Pan2015_Cob_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521466.fastq.gz,,auto
+Pan2015_Cob_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521467.fastq.gz,,auto
+Pan2015_Cob_LN_R3,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521468.fastq.gz,,auto
+Pan2015_Cob_ON_R1,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521469.fastq.gz,,auto
+Pan2015_Cob_ON_R2,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521470.fastq.gz,,auto
+Pan2015_Cob_ON_R3,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521471.fastq.gz,,auto
+Pan2015_Floret_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521472.fastq.gz,,auto
+Pan2015_Floret_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521473.fastq.gz,,auto
+Pan2015_Floret_LN_R3,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521474.fastq.gz,,auto
+Pan2015_Floret_ON_R1,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521475.fastq.gz,,auto
+Pan2015_Floret_ON_R2,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521476.fastq.gz,,auto
+Pan2015_Floret_ON_R3,/share/maize/rrellan/MaizExpressN/fastq/Pan2015/SRR1521477.fastq.gz,,auto

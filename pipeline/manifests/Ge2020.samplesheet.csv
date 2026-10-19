@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2,strandedness
+Ge2020_zmnlp5_plusN_R2,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962520_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962520_2.fastq.gz,auto
+Ge2020_WT_minusN_R3,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962521_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962521_2.fastq.gz,auto
+Ge2020_zmnlp5_minusN_R1,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962522_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962522_2.fastq.gz,auto
+Ge2020_zmnlp5_plusN_R3,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962523_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962523_2.fastq.gz,auto
+Ge2020_WT_plusN_R1,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962524_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962524_2.fastq.gz,auto
+Ge2020_WT_plusN_R2,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962525_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962525_2.fastq.gz,auto
+Ge2020_WT_plusN_R3,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962526_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962526_2.fastq.gz,auto
+Ge2020_zmnlp5_plusN_R1,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962527_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962527_2.fastq.gz,auto
+Ge2020_zmnlp5_minusN_R2,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962528_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962528_2.fastq.gz,auto
+Ge2020_zmnlp5_minusN_R3,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962529_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962529_2.fastq.gz,auto
+Ge2020_WT_minusN_R1,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962530_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962530_2.fastq.gz,auto
+Ge2020_WT_minusN_R2,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962531_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ge2020/SRR7962531_2.fastq.gz,auto

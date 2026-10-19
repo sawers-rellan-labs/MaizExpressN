@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2,strandedness
+Wang2025b_WT_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012698_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012698_2.fastq.gz,auto
+Wang2025b_nrt2.5_LN_R3,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012699_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012699_2.fastq.gz,auto
+Wang2025b_nrt2.5_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012700_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012700_2.fastq.gz,auto
+Wang2025b_nrt2.5_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012701_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012701_2.fastq.gz,auto
+Wang2025b_WT_HN_R3,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012702_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012702_2.fastq.gz,auto
+Wang2025b_WT_HN_R2,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012703_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012703_2.fastq.gz,auto
+Wang2025b_WT_HN_R1,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012704_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012704_2.fastq.gz,auto
+Wang2025b_nrt2.5_HN_R3,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012705_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012705_2.fastq.gz,auto
+Wang2025b_WT_LN_R3,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012706_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012706_2.fastq.gz,auto
+Wang2025b_WT_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012707_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012707_2.fastq.gz,auto
+Wang2025b_nrt2.5_HN_R2,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012708_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012708_2.fastq.gz,auto
+Wang2025b_nrt2.5_HN_R1,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012709_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2025b/SRR30012709_2.fastq.gz,auto

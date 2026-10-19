@@ -1,0 +1,26 @@
+.DS_Store
+.Rhistory
+.Rproj.user/
+renv/library/
+renv/staging/
+
+# API response cache from metadata/build scripts
+metadata/build/cache/
+
+# raw and intermediate sequencing data never live here (they stay on Hazel)
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.sra
+*.bam
+quant.sf
+__pycache__/
+
+# private notes (evidence for studies not used in the analysis) never go to the public repo
+private/
+
+# deployment record for Posit Connect Cloud (local to this machine)
+app/rsconnect/
+
+# Claude Code local settings
+.claude/

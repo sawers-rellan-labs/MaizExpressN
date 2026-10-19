@@ -1,0 +1,34 @@
+filter_set	tissue_group	contrast_class	genes	max_k_studies	genes_k2plus	sig_k2plus
+B73	Leaf	deficiency	24461	2	19597	877
+B73	Leaf	field_rate	27696	1	0	0
+B73	Leaf	resupply	26016	1	0	0
+B73	Leaf	starvation	26016	1	0	0
+B73	Root	deficiency	28498	4	26133	373
+B73	Root	form	23526	1	0	0
+B73	Root	local	28194	3	22941	443
+B73	Root	resupply	30153	8	28386	198
+B73	Root	starvation	26016	1	0	0
+B73	Shoot	resupply	28003	2	22829	166
+B73	Whole seedling	excess	26495	1	0	0
+all	Leaf	deficiency	30100	6	27908	999
+all	Leaf	field_rate	27696	1	0	0
+all	Leaf	resupply	29326	2	24726	1085
+all	Leaf	starvation	29326	2	24726	933
+all	Root	deficiency	30344	7	28654	543
+all	Root	form	27603	2	22260	187
+all	Root	local	28194	3	22941	443
+all	Root	resupply	32172	11	29850	282
+all	Root	starvation	29326	2	24726	264
+all	Shoot	deficiency	27425	1	0	0
+all	Shoot	form	26337	1	0	0
+all	Shoot	resupply	28003	2	22829	166
+all	Whole seedling	excess	26495	1	0	0
+all	Whole seedling	resupply	24828	1	0	0
+B73	Leaf	all_levels	30454	4	25699	393
+B73	Root	all_levels	31082	14	29105	213
+B73	Shoot	all_levels	28003	2	22829	166
+B73	Whole seedling	all_levels	26495	1	0	0
+all	Leaf	all_levels	32205	9	29995	786
+all	Root	all_levels	32823	20	31000	334
+all	Shoot	all_levels	29565	3	26307	265
+all	Whole seedling	all_levels	27765	2	23558	287

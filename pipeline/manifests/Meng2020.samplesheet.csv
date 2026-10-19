@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2,strandedness
+Meng2020_R101_0h_R2,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020462_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020462_2.fastq.gz,auto
+Meng2020_R101_0h_R1,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020463_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020463_2.fastq.gz,auto
+Meng2020_R101_2h_R1,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020464_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020464_2.fastq.gz,auto
+Meng2020_R101_0h_R3,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020465_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020465_2.fastq.gz,auto
+Meng2020_R101_2h_R3,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020466_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020466_2.fastq.gz,auto
+Meng2020_R101_2h_R2,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020467_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020467_2.fastq.gz,auto
+Meng2020_WT_0h_R2,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020468_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020468_2.fastq.gz,auto
+Meng2020_WT_0h_R1,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020469_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020469_2.fastq.gz,auto
+Meng2020_WT_2h_R1,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020470_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020470_2.fastq.gz,auto
+Meng2020_WT_0h_R3,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020471_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020471_2.fastq.gz,auto
+Meng2020_WT_2h_R3,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020472_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020472_2.fastq.gz,auto
+Meng2020_WT_2h_R2,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020473_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Meng2020/SRR9020473_2.fastq.gz,auto

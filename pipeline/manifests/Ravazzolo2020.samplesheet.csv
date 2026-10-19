@@ -1,0 +1,10 @@
+sample,fastq_1,fastq_2,strandedness
+Ravazzolo2020_minusN_R1,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2020/SRR10669772.fastq.gz,,auto
+Ravazzolo2020_minusN_R2,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2020/SRR10669773.fastq.gz,,auto
+Ravazzolo2020_minusN_R3,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2020/SRR10669774.fastq.gz,,auto
+Ravazzolo2020_NO3_R1,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2020/SRR10669775.fastq.gz,,auto
+Ravazzolo2020_NO3_R2,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2020/SRR10669776.fastq.gz,,auto
+Ravazzolo2020_NO3_R3,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2020/SRR10669777.fastq.gz,,auto
+Ravazzolo2020_NH4_R1,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2020/SRR10669778.fastq.gz,,auto
+Ravazzolo2020_NH4_R2,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2020/SRR10669779.fastq.gz,,auto
+Ravazzolo2020_NH4_R3,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2020/SRR10669780.fastq.gz,,auto

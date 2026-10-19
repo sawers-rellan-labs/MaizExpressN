@@ -1,0 +1,7 @@
+sample,fastq_1,fastq_2,strandedness
+Wang2020a_plusN_30min_R3,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387981_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387981_2.fastq.gz,auto
+Wang2020a_plusN_30min_R2,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387982_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387982_2.fastq.gz,auto
+Wang2020a_plusN_30min_R1,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387983_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387983_2.fastq.gz,auto
+Wang2020a_minusN_0min_R3,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387984_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387984_2.fastq.gz,auto
+Wang2020a_minusN_0min_R2,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387987_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387987_2.fastq.gz,auto
+Wang2020a_minusN_0min_R1,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387988_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Wang2020a/SRR10387988_2.fastq.gz,auto

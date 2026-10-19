@@ -1,0 +1,3 @@
+study_id	item	question	proposed_answer	evidence
+Du2020	PRJNA556506 link	The paper gives no accession; PRJNA556506 aliases match its design exactly (B73, SN/NN, 9 time points). Accept as Du2020 data?	Accept (resolved by repository match).	ENA sample aliases B73_HN_0..8 / B73_LN_0..8; JAAS submitter; registered 2019-07
+Du2020	replication	One pooled sample per time point and treatment: treat as unreplicated in DESeq2 (or model time as continuous)?	Mark contrasts replicated = FALSE; consider a time-course model (e.g. spline over time x treatment) at M4.	Paper Methods: one biological replicate (pool of 3 plants) per time point

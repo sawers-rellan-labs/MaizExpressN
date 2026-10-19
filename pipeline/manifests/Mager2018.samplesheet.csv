@@ -1,0 +1,10 @@
+sample,fastq_1,fastq_2,strandedness
+Mager2018_Ctrl_R1,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829710_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829710_2.fastq.gz,auto
+Mager2018_Ctrl_R2,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829711_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829711_2.fastq.gz,auto
+Mager2018_Ctrl_R3,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829712_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829712_2.fastq.gz,auto
+Mager2018_minusN_R1,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829713_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829713_2.fastq.gz,auto
+Mager2018_minusN_R2,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829714_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829714_2.fastq.gz,auto
+Mager2018_minusP_R2,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829722_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829722_2.fastq.gz,auto
+Mager2018_minusP_R3,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829723_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829723_2.fastq.gz,auto
+Mager2018_minusN_R3,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829724_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829724_2.fastq.gz,auto
+Mager2018_minusP_R1,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829725_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mager2018/SRR6829725_2.fastq.gz,auto

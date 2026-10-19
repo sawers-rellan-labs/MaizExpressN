@@ -1,0 +1,3 @@
+sample,fastq_1,fastq_2,strandedness
+Lv2016_SN_R1,/share/maize/rrellan/MaizExpressN/fastq/Lv2016/SRR2070626_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Lv2016/SRR2070626_2.fastq.gz,auto
+Lv2016_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Lv2016/SRR2070627_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Lv2016/SRR2070627_2.fastq.gz,auto

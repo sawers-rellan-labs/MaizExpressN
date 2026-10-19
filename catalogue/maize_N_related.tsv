@@ -1,0 +1,37 @@
+data_type	study_id	pmid	doi_url	design	accession	note
+Microarray	Schlüter2012	22972706	https://doi.org/10.1104/pp.112.204420	A188 and B73 source leaves; 15 vs 0.15 mM nitrate	GSE40678	Series title matches design
+Microarray	Schlüter2013	23822863	https://doi.org/10.1186/1471-2164-14-442	B73 source leaves; low N, low P and cold	GEO (number not captured)	N arrays shared with Schlüter2012
+Microarray	Yang2011	21980173	https://doi.org/10.1104/pp.111.187898	N-status biomarker genes; limiting vs sufficient N, recovery, field	GSE32361	
+Microarray	Coll2010	20349115	https://doi.org/10.1007/s11103-010-9624-5	MON810 vs non-GM varieties; conventional vs low-N field		Affymetrix
+Microarray	Humbert2013	23324127	https://doi.org/10.1186/1471-2164-14-3	Water x N stress combinations; SRG-200; several tissues		Custom Affymetrix
+Microarray	Zamboni2014	24805158	https://doi.org/10.1111/jipb.12214	Nitrate induction time course in roots; Lo5 (high NUE) vs T250		
+Microarray	Mascia2019	31574923	https://doi.org/10.3390/ijms20194856	Lo5 vs T250 roots; 1 and 4 d N starvation	GEO (number not captured)	Agilent 4x44K
+Microarray	Plett2016a	26038196	https://doi.org/10.1111/pbi.12388	Gaspé Flint leaf and root; 0.5 vs 2.5 mM nitrate across 7 life-cycle stages	GSE61820	
+Microarray	Plett2016b	27511191	https://doi.org/10.1007/s11103-016-0512-5	Same plants as Plett2016a; N-assimilation enzymes vs transcripts	GSE61820	Reuses Plett2016a arrays
+Microarray	Amiour2012	22936829	https://doi.org/10.1093/jxb/ers186	Leaves under long-term N deficiency at two stages; + proteome, metabolome		
+Microarray	Zanin2014	25524070	https://doi.org/10.1093/pcp/pcu202	Roots: urea, nitrate, urea + nitrate vs no N		
+Microarray	Zanin2016	27446099	https://doi.org/10.3389/fpls.2016.00845	Urea-fed seedlings +/- urease inhibitor NBPT		No N-level contrast
+Microarray	Chowdhury2022	34554248	https://doi.org/10.1093/jxb/erab435	B73 root metabolic model; 5 vs 0.1 mM nitrate		cDNA arrays; data in Table S2
+cDNA-AFLP	Trevisan2011	21762167	https://doi.org/10.1111/j.1469-8137.2011.03822.x	Seedling roots, nitrate supply; hemoglobin-NR co-regulation		
+Small RNA	Zhao2012	22235323	https://doi.org/10.1371/journal.pone.0029669	B73 shoot and root miRNAs after 2 d N deprivation; + degradome		
+Small RNA	Xu2011	22132192	https://doi.org/10.1371/journal.pone.0028009	Ye478 leaf and root miRNAs; chronic and 2-h low nitrate (miRNA arrays)	GEO (number not captured)	
+Small RNA	Zhao2013	23788746	https://doi.org/10.1093/aob/mct133	Seedling miRNAs and targets under low nitrate; + degradome		
+Small RNA	Trevisan2012	22211437	https://doi.org/10.1111/j.1365-3040.2011.02478.x	Roots +/- nitrate; miRNA arrays + in situ		
+Small RNA	Yang2019	31313105	https://doi.org/10.1007/s13258-019-00848-0	miRNAs under N deficiency vs resupply vs control		sRNA-seq
+Reprocessed / meta-analysis	Hayford2024	38816789	https://doi.org/10.1186/s12864-024-10443-7	MaizeGDB 2024: 24 B73 stress datasets remapped to B73 v5, incl. He2016, Mu2017, Ravazzolo2020, Ravazzolo2021a		Quick lookups in MaizeGDB/qTeller
+Reprocessed / meta-analysis	Pardo2025	41092016	https://doi.org/10.1093/g3journal/jkaf223	Core abiotic-stress genes from 39 BioProjects (5 low-N)	PRJNA904734 (low-N project named in text)	Full list in supplement; preprint PMID 40027706
+Reprocessed / meta-analysis	Jiang2018	29518046	https://doi.org/10.3390/genes9030151	Gene networks from public N microarrays (90 Affymetrix arrays; Schlüter set)		
+Reprocessed / meta-analysis	Xue2024	39529933	https://doi.org/10.3389/fpls.2024.1477383	ZmCASPL family; low-N time course data	PRJNA304223 (He2016)	
+Reprocessed / meta-analysis	Ma2017	28764653	https://doi.org/10.1186/s12870-017-1077-4	Co-expression network from 787 SRA runs (36 studies); nitrate-assimilation module		Study list in supplement
+Reprocessed / meta-analysis	Luo2022	36388550	https://doi.org/10.3389/fpls.2022.1013598	WGCNA + meta-QTL across low-N, low-P and disease datasets		Dataset list in supplement
+Reprocessed / meta-analysis	Yang2026	42452185	https://doi.org/10.3390/plants15131977	Stress co-expression modules from 15 datasets (286 samples), incl. low N/P	GSE142477 (validation set)	
+Reprocessed / meta-analysis	Mia2026	41746965	https://doi.org/10.1371/journal.pone.0342990	Sugar transporters; reused public HN/LN hybrid + parents RNA-seq		Probably Bi2014 data
+Reprocessed / meta-analysis	Liu2026	41977721	https://doi.org/10.3390/plants15071062	AHL family; reused group's V33/V37 drought and low-N RNA-seq		
+Reprocessed / meta-analysis	Yamamoto2022	35958195	https://doi.org/10.3389/fpls.2022.905894	PEPC family; reanalysed maize/sorghum N-stress RNA-seq		
+Reprocessed / meta-analysis	Xing2023	37967146	https://doi.org/10.1111/tpj.16550	NUE candidate genes mined from published omics		
+Reprocessed / meta-analysis	Yan2025	41514965	https://doi.org/10.3390/plants15010020	Low-N root aerenchyma GWAS; reused published 4F1 vs Zheng32 transcriptome		
+Reprocessed / meta-analysis	Lin2014	25209110	https://doi.org/10.1007/s11103-014-0246-1	Reference genes stable across genotypes and N treatments		N tested by qPCR only
+Reprocessed / meta-analysis	Simons2014	25248718	https://doi.org/10.1104/pp.114.245787	Leaf genome-scale model; N-limited vs N-complete; gln1 mutants		
+RNA-seq, no N-supply contrast	Gong2020	32392584	https://doi.org/10.1093/jxb/eraa229	N remobilization after silking; PH4CV vs PH6WC leaves; 15N		Useful for remobilization, not N levels
+RNA-seq, no N-supply contrast	Yang2023	37922646	https://doi.org/10.1016/j.plaphy.2023.108147	Leaf N fluxes in stay-green hybrids XY335 vs XY696; 15N		
+RNA-seq, no N-supply contrast	Sun2018	29597009	https://doi.org/10.1016/j.molp.2018.03.013	ZmmiR528 transgenics under N luxury; lignin and lodging		N contrast in RNA-seq not confirmed

@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2,strandedness
+Ravazzolo2021a_minusN_R1,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173506_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173506_2.fastq.gz,auto
+Ravazzolo2021a_minusN_R2,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173507_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173507_2.fastq.gz,auto
+Ravazzolo2021a_minusN_R3,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173508_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173508_2.fastq.gz,auto
+Ravazzolo2021a_NO3_R1,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173509_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173509_2.fastq.gz,auto
+Ravazzolo2021a_NO3_R2,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173510_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173510_2.fastq.gz,auto
+Ravazzolo2021a_NO3_R3,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173511_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173511_2.fastq.gz,auto
+Ravazzolo2021a_minusN_TIS108_R1,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173512_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173512_2.fastq.gz,auto
+Ravazzolo2021a_minusN_TIS108_R2,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173513_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173513_2.fastq.gz,auto
+Ravazzolo2021a_minusN_TIS108_R3,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173514_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173514_2.fastq.gz,auto
+Ravazzolo2021a_NO3_PCIB_R1,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173515_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173515_2.fastq.gz,auto
+Ravazzolo2021a_NO3_PCIB_R2,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173516_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173516_2.fastq.gz,auto
+Ravazzolo2021a_NO3_PCIB_R3,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173517_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021a/SRR13173517_2.fastq.gz,auto

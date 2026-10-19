@@ -1,0 +1,60 @@
+study_id	sample_id	reason
+AlonsoNieves2022	AlonsoNieves2022_hom_leaf_LowNP_R1	70.5% mapped vs 85.8% median for its study, tissue and genotype
+AlonsoNieves2022	AlonsoNieves2022_hom_leaf_LowNP_R2	74.0% mapped vs 85.8% median for its study, tissue and genotype
+AlonsoNieves2022	AlonsoNieves2022_hom_leaf_LowP_R1	74.9% mapped vs 85.8% median for its study, tissue and genotype
+AlonsoNieves2022	AlonsoNieves2022_hom_root_LowP_R2	61.7% mapped vs 77.9% median for its study, tissue and genotype
+Braynen2025	Braynen2025_Root_48h_R2	disagrees with its replicates: r = 0.946 with them vs 0.981 among them (study within-group median 0.978)
+Cao2024	Cao2024_zmnlp31_KCl_R3	disagrees with its replicates: r = 0.948 with them vs 0.982 among them (study within-group median 0.980)
+Cheng2021	Cheng2021_B73xIHP1_LN_R3	46.0% mapped (< 60%); library type U vs study SR
+Cheng2021	Cheng2021_B73xILP1_HN_R1	disagrees with its replicates: r = 0.919 with them vs 0.951 among them (study within-group median 0.967)
+Cheng2021	Cheng2021_B73xMo17_LN_R2	74.2% mapped vs 84.6% median for its study, tissue and genotype
+Cheng2021	Cheng2021_B73xMo18W_HN_R3	59.8% mapped (< 60%)
+Cheng2021	Cheng2021_B73xMo18W_LN_R1	56.8% mapped (< 60%)
+Cheng2021	Cheng2021_B73xMo18W_LN_R2	library type U vs study SR
+Cheng2021	Cheng2021_B73xOh7B_LN_R3	61.3% mapped vs 74.7% median for its study, tissue and genotype; library type U vs study SR
+Cheng2021	Cheng2021_B73xPH207_LN_R1	its 2 replicates disagree: r = 0.913 vs study within-group median 0.967
+Cheng2021	Cheng2021_B73xPH207_LN_R2	67.1% mapped vs 84.9% median for its study, tissue and genotype
+Cheng2021	Cheng2021_B73xPH207_LN_R3	its 2 replicates disagree: r = 0.913 vs study within-group median 0.967
+Cheng2021	Cheng2021_B73xPHG47_HN_R1	its 2 replicates disagree: r = 0.874 vs study within-group median 0.967
+Cheng2021	Cheng2021_B73xPHG47_HN_R2	its 2 replicates disagree: r = 0.874 vs study within-group median 0.967
+Cheng2021	Cheng2021_B73xPHG47_HN_R3	65.6% mapped vs 75.9% median for its study, tissue and genotype
+Cheng2021	Cheng2021_B73xPHG84_HN_R3	library type U vs study SR
+Cheng2021	Cheng2021_B73xPHG84_LN_R3	58.1% mapped (< 60%)
+Cheng2021	Cheng2021_ILP1_HN_R2	45.1% mapped (< 60%); library type U vs study SR
+Cheng2021	Cheng2021_PH207_LN_R3b	disagrees with its replicates: r = 0.623 with them vs 0.960 among them (study within-group median 0.967)
+Cheng2021	Cheng2021_W22_HN_R3	70.9% mapped vs 83.3% median for its study, tissue and genotype
+Du2021	Du2021_Qi319_shoot_LN_R1	its 2 replicates disagree: r = 0.848 vs study within-group median 0.985
+Du2021	Du2021_Qi319_shoot_LN_R2	its 2 replicates disagree: r = 0.848 vs study within-group median 0.985
+Ge2020	Ge2020_zmnlp5_minusN_R1	disagrees with its replicates: r = 0.943 with them vs 0.993 among them (study within-group median 0.984)
+Ge2020	Ge2020_zmnlp5_plusN_R1	disagrees with its replicates: r = 0.797 with them vs 0.995 among them (study within-group median 0.984)
+Huang2025	Huang2025_Shoot_minusN_10min_R1	1.2 M mapped reads (< 2 M)
+Huang2025	Huang2025_Shoot_minusN_10min_R2	1.8 M mapped reads (< 2 M)
+Huang2025	Huang2025_Shoot_minusN_10min_R3	1.9 M mapped reads (< 2 M)
+Huang2025	Huang2025_Shoot_minusN_30min_R2	1.6 M mapped reads (< 2 M)
+Huang2025	Huang2025_Shoot_minusN_45min_R2	1.9 M mapped reads (< 2 M)
+Huang2025	Huang2025_Shoot_minusN_60min_R2	1.3 M mapped reads (< 2 M)
+Huang2025	Huang2025_Shoot_minusN_60min_R3	1.2 M mapped reads (< 2 M)
+Huang2025	Huang2025_Shoot_plusN_20min_R2	1.8 M mapped reads (< 2 M)
+Li2025	Li2025_082_HN_R1	disagrees with its replicates: r = 0.823 with them vs 0.884 among them (study within-group median 0.922)
+Li2025	Li2025_082_HN_R2	disagrees with its replicates: r = 0.829 with them vs 0.871 among them (study within-group median 0.922)
+Li2025	Li2025_107_HN_R3	disagrees with its replicates: r = 0.715 with them vs 0.963 among them (study within-group median 0.922)
+Li2025	Li2025_107_No_R3	disagrees with its replicates: r = 0.800 with them vs 0.953 among them (study within-group median 0.922)
+Li2026a	Li2026a_Root_CCl_R2	disagrees with its replicates: r = 0.825 with them vs 0.976 among them (study within-group median 0.978)
+Li2026a	Li2026a_Root_CNO3_R3	64.1% mapped vs 74.5% median for its study, tissue and genotype
+Li2026a	Li2026a_Root_SpNO3_R3	disagrees with its replicates: r = 0.866 with them vs 0.979 among them (study within-group median 0.978)
+Ma2021a	Ma2021a_HN_root_R1	57.2% mapped (< 60%)
+Ma2021a	Ma2021a_HN_root_R2	52.7% mapped (< 60%)
+Ma2021a	Ma2021a_HN_root_R3	58.7% mapped (< 60%)
+Ma2021a	Ma2021a_LN_root_R1	60.0% mapped (< 60%)
+Ravazzolo2020	Ravazzolo2020_NH4_R2	disagrees with its replicates: r = 0.792 with them vs 0.950 among them (study within-group median 0.953)
+Ravazzolo2021a	Ravazzolo2021a_NO3_PCIB_R3	40.6% mapped (< 60%); library type IU vs study ISR
+Ravazzolo2021b	Ravazzolo2021b_NO3_cPTIO_R1	73.4% mapped vs 84.1% median for its study, tissue and genotype
+Singh2022	Singh2022_DMI56_Root_LN	50.0% mapped (< 60%)
+Singh2022	Singh2022_DMI81_Root_LN	40.7% mapped (< 60%)
+TorresRodriguez2021	TorresRodriguez2021_WT_leaf_LowNP_R2	63.8% mapped vs 78.4% median for its study, tissue and genotype
+TorresRodriguez2021	TorresRodriguez2021_WT_leaf_LowP_R1	55.4% mapped (< 60%)
+TorresRodriguez2021	TorresRodriguez2021_WT_leaf_LowP_R2	55.1% mapped (< 60%)
+TorresRodriguez2021	TorresRodriguez2021_WT_root_Full_R1	its 2 replicates disagree: r = 0.923 vs study within-group median 0.979
+TorresRodriguez2021	TorresRodriguez2021_WT_root_Full_R2	its 2 replicates disagree: r = 0.923 vs study within-group median 0.979
+Yu2016	Yu2016_BR_LN_R3	disagrees with its replicates: r = 0.845 with them vs 0.965 among them (study within-group median 0.950)
+Yu2016	Yu2016_CR_HN_R1	disagrees with its replicates: r = 0.918 with them vs 0.958 among them (study within-group median 0.950)

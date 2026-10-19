@@ -1,0 +1,47 @@
+kind	label	pmid	link	why
+Paper	Li2015 (Plant Cell)	25944100	https://doi.org/10.1105/tpc.15.00158	atg12 autophagy mutants under N starvation; MeSH lists RNA sequencing
+Paper	Zheng2025 (J Exp Bot)	40365707	https://doi.org/10.1093/jxb/eraf202	ZmNRL1 mutant/overexpressor; comparative transcriptome under N stress
+Paper	Yu2021 (Nat Plants)	33833418	https://doi.org/10.1038/s41477-021-00897-y	Root-axis transcriptome; N-deprivation experiments with lrt1 and flavones
+Paper	Wang2024 (Plant Cell)	38917216	https://doi.org/10.1093/plcell/koae184	ZmNLP3.2 knockout/overexpressor under low N
+Paper	Gu2025 (Plant J)	40474668	https://doi.org/10.1111/tpj.70263	ZmNLP8 mutants under different nitrate conditions
+Paper	Wang2026 (J Integr Plant Biol)	41566850	https://doi.org/10.1111/jipb.70147	JA / ZmbHLH99 / ZmNLP3.2 under low nitrate
+Paper	Li2026c (Plant Cell Environ)	41555148	https://doi.org/10.1111/pce.70371	ZmPT7 mutants sensitive to low nitrate
+Paper	Hu2025 (New Phytol)	39888029	https://doi.org/10.1111/nph.20422	ZmNPF7.10; K and N distribution
+Paper	Wang2020c (Plant Cell Environ)	33215716	https://doi.org/10.1111/pce.13956	ZmAER overexpression; low-N tolerance
+Paper	Huang2022 (Nature)	36385527	https://doi.org/10.1038/s41586-022-05441-2	THP9 teosinte allele; NUE under low N
+Paper	Hui2022 (Plant Cell)	35880836	https://doi.org/10.1093/plcell/koac225	ZmAMT3;1 RNAi; mycorrhiza-dependent N uptake
+Paper	Pii2019 (J Exp Bot)	30715422	https://doi.org/10.1093/jxb/ery433	Azospirillum inoculation x nitrate induction
+Paper	Hsu2025 (Plant J)	40616845	https://doi.org/10.1111/tpj.70319	Rhizosphere N dynamics in Andropogoneae grasses; RNA-seq of roots and leaves deposited on USDA Ag Data Commons
+Paper	Liang2024 (Physiol Plant)	38472657	https://doi.org/10.1111/ppl.14249	Fulvic acid under low N; DEGs (N-level contrast unclear)
+Paper	Li2021 (J Sci Food Agric)	34888887	https://doi.org/10.1002/jsfa.11711	Controlled-release urea + fulvic acid; leaf transcriptome
+Paper	Plant and Soil (N/P/K deficiency, roots)		https://doi.org/10.1007/s11104-019-04385-3	Transcriptome x N in title; not read
+Paper	J Soil Sci Plant Nutr (ear leaves, long-term N)		https://doi.org/10.1007/s42729-021-00637-3	Transcriptome x N in title; not read
+Paper	Crop J 2023 (water x N)		https://www.sciencedirect.com/science/article/pii/S2214514123001162	Transcriptome x N in title; not read
+Paper	Crop J		https://www.sciencedirect.com/science/article/pii/S2214514124000990	RNA-seq status unknown
+Paper	Crop J		https://www.sciencedirect.com/science/article/pii/S2214514124001855	RNA-seq status unknown
+Paper	Crop J		https://www.sciencedirect.com/science/article/pii/S2214514125002028	RNA-seq status unknown
+Paper	Plant Stress		https://www.sciencedirect.com/science/article/pii/S2667064X25001617	RNA-seq status unknown
+Paper	Environ Exp Bot		https://www.sciencedirect.com/science/article/pii/S0098847221003622	RNA-seq status unknown
+Paper	Appl Soil Ecol		https://www.sciencedirect.com/science/article/pii/S0929139325000502	RNA-seq status unknown
+Paper	Plant and Soil 2024		https://doi.org/10.1007/s11104-024-06561-6	RNA-seq status unknown
+Paper	J Plant Biol 2024		https://doi.org/10.1007/s12374-024-09428-6	RNA-seq status unknown
+Preprint	Xu 2022 (bioRxiv)		https://doi.org/10.1101/2022.02.09.479784	Unpublished preprint; RNA-seq status unknown
+Paper	Scientia Agricultura Sinica 2023 (Chinese)		https://doi.org/10.3864/j.issn.0578-1752.2023.06.002	Title not retrieved
+Paper	Scientia Agricultura Sinica 2022 (Chinese)		https://doi.org/10.3864/j.issn.0578-1752.2022.03.002	Title not retrieved
+Paper	Acta Agronomica Sinica 2023 (Chinese)		https://doi.org/10.3724/SP.J.1006.2023.23045	Title not retrieved
+Dataset	pepck1::Ds vs W22 leaf gradient x N (USDA Ag Data Commons)		https://agdatacommons.nal.usda.gov/articles/dataset/Transcriptome_of_maize_leaf_gradient_and_nitrogen_response_in_pepck1_Ds_mutant_and_W22_control_plants/25089188/1	No linked paper found; BioProject not retrieved
+Dataset	PRJNA904734		https://www.ncbi.nlm.nih.gov/bioproject/PRJNA904734	Low-N BioProject named in Pardo2025; source study unknown
+Dataset	E-MTAB-8633		https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-8633	Came up in N-related repository searches; title not seen, may not be N
+Dataset	GSE111425		https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE111425	Came up in N-related repository searches; title not seen, may not be N
+Dataset	GSE49681		https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE49681	Came up in N-related repository searches; title not seen, may not be N
+Dataset	GSE135613		https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135613	Came up in N-related repository searches; title not seen, may not be N
+Dataset	PRJNA707066		https://www.ncbi.nlm.nih.gov/bioproject/PRJNA707066	Came up in N-related repository searches; title not seen, may not be N
+Dataset	PRJNA299645		https://www.ncbi.nlm.nih.gov/bioproject/PRJNA299645	Came up in N-related repository searches; title not seen, may not be N
+Dataset	PRJCA044958		https://ngdc.cncb.ac.cn/bioproject/browse/PRJCA044958	Came up in N-related repository searches; title not seen, may not be N
+Dataset	PRJCA010624		https://ngdc.cncb.ac.cn/bioproject/browse/PRJCA010624	Came up in N-related repository searches; title not seen, may not be N
+Dataset	GSE17932		https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE17932	Came up in N-related repository searches; title not seen, may not be N
+Dataset	GSE125417		https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE125417	Came up in N-related repository searches; title not seen, may not be N
+Dataset	PRJNA1116564		https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1116564	Came up in N-related repository searches; title not seen, may not be N
+Dataset	PRJNA208608		https://www.ncbi.nlm.nih.gov/bioproject/PRJNA208608	Came up in N-related repository searches; title not seen, may not be N
+Dataset	E-MTAB-4246		https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-4246	Came up in N-related repository searches; title not seen, may not be N
+Dataset	E-MTAB-4208		https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-4208	Came up in N-related repository searches; title not seen, may not be N

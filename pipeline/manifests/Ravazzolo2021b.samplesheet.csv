@@ -1,0 +1,4 @@
+sample,fastq_1,fastq_2,strandedness
+Ravazzolo2021b_NO3_cPTIO_R1,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021b/SRR14300954.fastq.gz,,auto
+Ravazzolo2021b_NO3_cPTIO_R2,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021b/SRR14300955.fastq.gz,,auto
+Ravazzolo2021b_NO3_cPTIO_R3,/share/maize/rrellan/MaizExpressN/fastq/Ravazzolo2021b/SRR14300956.fastq.gz,,auto

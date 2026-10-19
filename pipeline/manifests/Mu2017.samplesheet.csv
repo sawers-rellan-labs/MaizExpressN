@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2,strandedness
+Mu2017_HN_R1,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335599_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335599_2.fastq.gz,auto
+Mu2017_HN_R1,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335600_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335600_2.fastq.gz,auto
+Mu2017_HN_R1,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335601_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335601_2.fastq.gz,auto
+Mu2017_HN_R2,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335602_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335602_2.fastq.gz,auto
+Mu2017_HN_R2,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335603_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335603_2.fastq.gz,auto
+Mu2017_HN_R2,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335604_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335604_2.fastq.gz,auto
+Mu2017_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335605_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335605_2.fastq.gz,auto
+Mu2017_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335606_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335606_2.fastq.gz,auto
+Mu2017_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335607_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335607_2.fastq.gz,auto
+Mu2017_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335608_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335608_2.fastq.gz,auto
+Mu2017_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335609_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335609_2.fastq.gz,auto
+Mu2017_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335610_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Mu2017/SRR6335610_2.fastq.gz,auto

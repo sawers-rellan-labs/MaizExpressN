@@ -1,0 +1,3 @@
+study_id	item	question	proposed_answer	evidence
+Wu2024	Mo17 protocol	Wu2024 does not restate the growth protocol for the RNA-seq series; assumed identical to Du2020 (pre-growth on 0.15 mM nitrate, then 15 mM KNO3 vs KCl). Confirm?	Assume identical (same group, same 9 time points, same treatments).	Wu2024 text: B73 and Mo17 roots treated with 15 mM KNO3 vs 15 mM KCl; 36 samples
+Wu2024	zmereb97 mutant RNA-seq	The WT vs zmereb97 RNA-seq at 5 mM KNO3 (no N contrast) has no accession; ignore?	Ignore (no N contrast, not deposited).	Wu2024 Results; no accession

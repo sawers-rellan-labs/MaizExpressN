@@ -1,0 +1,5 @@
+run	url	md5	dest
+SRR2070626	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR207/006/SRR2070626/SRR2070626_1.fastq.gz	ddde7c8caa6f88f99bb4ca79f9bef23e	/share/maize/rrellan/MaizExpressN/fastq/Lv2016/SRR2070626_1.fastq.gz
+SRR2070626	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR207/006/SRR2070626/SRR2070626_2.fastq.gz	b119e8124ef0b63c0ce0b347296496c7	/share/maize/rrellan/MaizExpressN/fastq/Lv2016/SRR2070626_2.fastq.gz
+SRR2070627	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR207/007/SRR2070627/SRR2070627_1.fastq.gz	6779928714fb16cfe49b96faa996c6ce	/share/maize/rrellan/MaizExpressN/fastq/Lv2016/SRR2070627_1.fastq.gz
+SRR2070627	https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR207/007/SRR2070627/SRR2070627_2.fastq.gz	aef52e91851a6661184428259b4da69b	/share/maize/rrellan/MaizExpressN/fastq/Lv2016/SRR2070627_2.fastq.gz

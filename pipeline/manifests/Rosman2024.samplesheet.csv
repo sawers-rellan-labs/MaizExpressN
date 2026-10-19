@@ -1,0 +1,9 @@
+sample,fastq_1,fastq_2,strandedness
+Rosman2024_ZAE94_HN_R2,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000651_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000651_2.fastq.gz,auto
+Rosman2024_ZAE94_HN_R1,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000652_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000652_2.fastq.gz,auto
+Rosman2024_mock_HN_R2,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000657_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000657_2.fastq.gz,auto
+Rosman2024_mock_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000658_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000658_2.fastq.gz,auto
+Rosman2024_mock_HN_R1,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000660_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000660_2.fastq.gz,auto
+Rosman2024_mock_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000663_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000663_2.fastq.gz,auto
+Rosman2024_ZAE94_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000664_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27000664_2.fastq.gz,auto
+Rosman2024_ZAE94_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27110053_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Rosman2024/SRR27110053_2.fastq.gz,auto

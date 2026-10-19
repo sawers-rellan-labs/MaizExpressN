@@ -1,0 +1,4 @@
+study_id	item	question	proposed_answer	evidence
+Ravazzolo2020	pool size	The paper says root apices were pooled from 20 seedlings per replicate; GEO says each replicate had 10-15 plants.	pooled_plants 20 (paper Methods).	PMC7013554 Methods 4.1-4.2; GEO GSE141860 overall design.
+Ravazzolo2020	instrument	SRA lists Illumina HiSeq 2500; the paper says NextSeq500.	Keep SRA metadata; no effect on the design (all 9 runs on one platform, so no within-study batch).	runs.tsv instrument; PMC7013554 Methods 4.2.
+Ravazzolo2020	shared controls	The -N and +NO3- samples are also Ravazzolo2021b’s controls; GSE173102 re-uploaded them (SRR14300957-62, identical read counts).	Curate here only; Ravazzolo2021b contrasts borrow Ravazzolo2020_minusN_R1-3 and Ravazzolo2020_NO3_R1-3; never count them twice when pooling.	accessions_resolved.tsv; GSE173102 sample descriptions point to GSM4214790-95.

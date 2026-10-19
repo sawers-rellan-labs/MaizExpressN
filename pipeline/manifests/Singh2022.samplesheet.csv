@@ -1,0 +1,9 @@
+sample,fastq_1,fastq_2,strandedness
+Singh2022_DMI81_Root_Nsuff,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612028_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612028_2.fastq.gz,auto
+Singh2022_DMI81_Root_LN,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612029_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612029_2.fastq.gz,auto
+Singh2022_DMI81_Leaf_Nsuff,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612030_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612030_2.fastq.gz,auto
+Singh2022_DMI81_Leaf_LN,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612031_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612031_2.fastq.gz,auto
+Singh2022_DMI56_Root_Nsuff,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612032_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612032_2.fastq.gz,auto
+Singh2022_DMI56_Root_LN,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612033_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612033_2.fastq.gz,auto
+Singh2022_DMI56_Leaf_Nsuff,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612034_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612034_2.fastq.gz,auto
+Singh2022_DMI56_Leaf_LN,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612035_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Singh2022/SRR14612035_2.fastq.gz,auto

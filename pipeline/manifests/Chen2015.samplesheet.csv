@@ -1,0 +1,5 @@
+sample,fastq_1,fastq_2,strandedness
+Chen2015_Zheng58_NN,/share/maize/rrellan/MaizExpressN/fastq/Chen2015/SRR1765672_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Chen2015/SRR1765672_2.fastq.gz,auto
+Chen2015_Zheng58_LN,/share/maize/rrellan/MaizExpressN/fastq/Chen2015/SRR1770102_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Chen2015/SRR1770102_2.fastq.gz,auto
+Chen2015_Chang7-2_NN,/share/maize/rrellan/MaizExpressN/fastq/Chen2015/SRR1770105_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Chen2015/SRR1770105_2.fastq.gz,auto
+Chen2015_Chang7-2_LN,/share/maize/rrellan/MaizExpressN/fastq/Chen2015/SRR1770107_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Chen2015/SRR1770107_2.fastq.gz,auto

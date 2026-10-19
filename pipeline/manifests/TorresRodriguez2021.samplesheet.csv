@@ -1,0 +1,17 @@
+sample,fastq_1,fastq_2,strandedness
+TorresRodriguez2021_WT_leaf_LowN_R1,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820340_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820340_2.fastq.gz,auto
+TorresRodriguez2021_WT_root_LowNP_R2,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820361_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820361_2.fastq.gz,auto
+TorresRodriguez2021_WT_root_LowNP_R1,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820362_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820362_2.fastq.gz,auto
+TorresRodriguez2021_WT_root_LowP_R2,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820364_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820364_2.fastq.gz,auto
+TorresRodriguez2021_WT_root_LowP_R1,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820365_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820365_2.fastq.gz,auto
+TorresRodriguez2021_WT_root_LowN_R2,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820366_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820366_2.fastq.gz,auto
+TorresRodriguez2021_WT_root_LowN_R1,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820367_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820367_2.fastq.gz,auto
+TorresRodriguez2021_WT_root_Full_R2,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820368_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820368_2.fastq.gz,auto
+TorresRodriguez2021_WT_root_Full_R1,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820369_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820369_2.fastq.gz,auto
+TorresRodriguez2021_WT_leaf_LowNP_R1,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820370_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820370_2.fastq.gz,auto
+TorresRodriguez2021_WT_leaf_Full_R2,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820374_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820374_2.fastq.gz,auto
+TorresRodriguez2021_WT_leaf_LowP_R2,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820379_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820379_2.fastq.gz,auto
+TorresRodriguez2021_WT_leaf_LowP_R1,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820380_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820380_2.fastq.gz,auto
+TorresRodriguez2021_WT_leaf_LowNP_R2,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820381_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820381_2.fastq.gz,auto
+TorresRodriguez2021_WT_leaf_LowN_R2,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820385_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820385_2.fastq.gz,auto
+TorresRodriguez2021_WT_leaf_Full_R1,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820386_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/TorresRodriguez2021/SRR12820386_2.fastq.gz,auto

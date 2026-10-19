@@ -1,0 +1,17 @@
+sample,fastq_1,fastq_2,strandedness
+Du2021_Ye478_root_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195991_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195991_2.fastq.gz,auto
+Du2021_Ye478_root_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195992_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195992_2.fastq.gz,auto
+Du2021_Qi319_shoot_NN_R2,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195993_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195993_2.fastq.gz,auto
+Du2021_Qi319_shoot_NN_R1,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195994_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195994_2.fastq.gz,auto
+Du2021_Qi319_root_NN_R2,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195995_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195995_2.fastq.gz,auto
+Du2021_Qi319_root_NN_R1,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195996_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195996_2.fastq.gz,auto
+Du2021_Qi319_shoot_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195997_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195997_2.fastq.gz,auto
+Du2021_Qi319_shoot_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195998_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195998_2.fastq.gz,auto
+Du2021_Ye478_shoot_NN_R2,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195999_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11195999_2.fastq.gz,auto
+Du2021_Ye478_shoot_NN_R1,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196000_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196000_2.fastq.gz,auto
+Du2021_Ye478_root_NN_R2,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196001_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196001_2.fastq.gz,auto
+Du2021_Ye478_root_NN_R1,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196002_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196002_2.fastq.gz,auto
+Du2021_Ye478_shoot_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196003_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196003_2.fastq.gz,auto
+Du2021_Ye478_shoot_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196004_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196004_2.fastq.gz,auto
+Du2021_Qi319_root_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196005_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196005_2.fastq.gz,auto
+Du2021_Qi319_root_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196006_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Du2021/SRR11196006_2.fastq.gz,auto

@@ -1,0 +1,4 @@
+study_id	item	question	proposed_answer	evidence
+Li2022	paper not read	The Crop Journal paper (doi 10.1016/j.cj.2022.02.004) could not be read; design taken from GEO GSE183171 only (B73, 4 mM Ca(NO3)2 vs 4 mM CaCl2, 2 cm root tips, 4 d). Accept GEO as the source?	Accept; check the paper PDF by hand if available.	GEO GSM5856951-54 treatment protocol and characteristics
+Li2022	replication	Only 2 bulk replicates per condition. Keep for v1 (SE will be wide)?	Keep; flag low replication in contrasts.tsv.	GEO titles replicate 1-2
+Li2022	primary root	GEO characteristics say '2cm root tips'; the (10x) extract protocol says primary roots were sampled. Coded primary root tip (PO:0020127). Accept?	Accept (seedlings are 4 d old; primary root dominates).	GSE183171 sample records

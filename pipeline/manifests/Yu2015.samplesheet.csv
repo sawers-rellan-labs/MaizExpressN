@@ -1,0 +1,9 @@
+sample,fastq_1,fastq_2,strandedness
+Yu2015_LN_R1,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012668_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012668_2.fastq.gz,auto
+Yu2015_LN_R2,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012672_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012672_2.fastq.gz,auto
+Yu2015_LN_R3,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012707_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012707_2.fastq.gz,auto
+Yu2015_LN_R4,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012709_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012709_2.fastq.gz,auto
+Yu2015_HN_R1,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012711_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012711_2.fastq.gz,auto
+Yu2015_HN_R2,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012713_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012713_2.fastq.gz,auto
+Yu2015_HN_R3,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012715_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012715_2.fastq.gz,auto
+Yu2015_HN_R4,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012717_1.fastq.gz,/share/maize/rrellan/MaizExpressN/fastq/Yu2015/SRR2012717_2.fastq.gz,auto

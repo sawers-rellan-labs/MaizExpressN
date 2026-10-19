@@ -1,0 +1,5 @@
+study_id	item	question	proposed_answer	evidence
+Bi2014	batch confounded with N	All 6 Low-N libraries were sequenced as PE36 in one GA II run (files s_1-s_6) and all 6 High-N libraries as PE40 in another (files 2_s_1-2_s_6), so N level is fully confounded with sequencing run and read length.	Keep include = TRUE; trim all reads to 36 nt before quantification and flag the contrast as batch-confounded.	ENA run_alias (submitted file names) and runs.tsv read_length; PMC3912931 Methods (2 x 36 or 2 x 40 bp).
+Bi2014	no replication	One pooled library (2-3 plants) per genotype x N x tissue; no biological replicates.	Keep; mark contrasts as unreplicated.	PMC3912931 Methods; accessions_resolved.tsv.
+Bi2014	hybrid cross direction	SRG150 is the hybrid of SRG100 and SRG200; the female parent is not stated.	genotype SRG150, genotype_class hybrid, background SRG150; cross direction NR.	PMC3912931 Methods (Plant materials and growth condition).
+Bi2014	age	age_days 30 is computed as 2 d germination in Turface + 4 weeks in hydroponics (harvest four weeks after transplanting).	Accept 30 d.	PMC3912931 Methods.
