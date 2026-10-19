@@ -95,3 +95,9 @@ Rscript tests/testthat.R
   contrasts are log2(alternative form / nitrate). The app's sign toggle flips it.
 - Counts are never pooled across studies; only log2FC with its SE.
 - Library QC is strict (`metadata/build/library_exclusions.py`); unreplicated contrasts are shown but never pooled.
+
+## License
+
+The code is released under the [MIT License](LICENSE) (© 2026 Rubén Rellán-Álvarez and the GEMMA Lab).
+The expression results are derived from published studies whose raw reads are in public repositories;
+please cite the original studies (listed with their DOIs in `catalogue/maize_N_rnaseq_studies.tsv`) when using them.
