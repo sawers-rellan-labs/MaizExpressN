@@ -7,22 +7,22 @@ AlonsoNieves2022_deficiency_pho12a-m1.1homozygous_Leaf_FullP	AlonsoNieves2022	de
 AlonsoNieves2022_deficiency_pho12a-m1.1homozygous_Leaf_LowP	AlonsoNieves2022										no samples left after exclusions
 AlonsoNieves2022_deficiency_pho12a-m1.1homozygous_Root_FullP	AlonsoNieves2022	deficiency	TRUE	2	2	""	26863	58	142	288	""
 AlonsoNieves2022_deficiency_pho12a-m1.1homozygous_Root_LowP	AlonsoNieves2022	deficiency	FALSE	2	1	AlonsoNieves2022_hom_root_LowP_R2	26863				""
-Bi2014_deficiency_SRG100_Leaf	Bi2014	deficiency	FALSE	1	1	""	28681				study has no replicates: log2 ratio of normalised counts
-Bi2014_deficiency_SRG150_Leaf	Bi2014	deficiency	FALSE	1	1	""	28681				study has no replicates: log2 ratio of normalised counts
-Bi2014_deficiency_SRG200_Leaf	Bi2014	deficiency	FALSE	1	1	""	28681				study has no replicates: log2 ratio of normalised counts
-Bi2014_deficiency_SRG100_Root	Bi2014	deficiency	FALSE	1	1	""	28681				study has no replicates: log2 ratio of normalised counts
-Bi2014_deficiency_SRG150_Root	Bi2014	deficiency	FALSE	1	1	""	28681				study has no replicates: log2 ratio of normalised counts
-Bi2014_deficiency_SRG200_Root	Bi2014	deficiency	FALSE	1	1	""	28681				study has no replicates: log2 ratio of normalised counts
-Braynen2025_starvation_Leaf_30min	Braynen2025	starvation	TRUE	3	3	""	26016	577	510	878	""
-Braynen2025_starvation_Leaf_3h	Braynen2025	starvation	TRUE	3	3	""	26016	1588	2431	792	""
-Braynen2025_starvation_Leaf_24h	Braynen2025	starvation	TRUE	3	3	""	26016	448	1475	888	""
-Braynen2025_resupply_Leaf_30min	Braynen2025	resupply	TRUE	3	3	""	26016	76	439	605	""
-Braynen2025_resupply_Leaf_24h	Braynen2025	resupply	TRUE	3	3	""	26016	250	502	674	""
-Braynen2025_starvation_Root_30min	Braynen2025	starvation	TRUE	3	3	""	26016	591	352	193	""
-Braynen2025_starvation_Root_3h	Braynen2025	starvation	TRUE	3	3	""	26016	380	795	229	""
-Braynen2025_starvation_Root_24h	Braynen2025	starvation	TRUE	3	3	""	26016	505	669	187	""
-Braynen2025_resupply_Root_30min	Braynen2025	resupply	TRUE	3	3	""	26016	389	850	144	""
-Braynen2025_resupply_Root_24h	Braynen2025	resupply	TRUE	3	2	Braynen2025_Root_48h_R2	26016	793	534	162	""
+Bi2014_deficiency_SRG100_Leaf	Bi2014	deficiency	FALSE	1	1	""	28439				study has no replicates: log2 ratio of normalised counts
+Bi2014_deficiency_SRG150_Leaf	Bi2014	deficiency	FALSE	1	1	""	28439				study has no replicates: log2 ratio of normalised counts
+Bi2014_deficiency_SRG200_Leaf	Bi2014	deficiency	FALSE	1	1	""	28439				study has no replicates: log2 ratio of normalised counts
+Bi2014_deficiency_SRG100_Root	Bi2014										no samples left after exclusions
+Bi2014_deficiency_SRG150_Root	Bi2014	deficiency	FALSE	1	1	""	28439				study has no replicates: log2 ratio of normalised counts
+Bi2014_deficiency_SRG200_Root	Bi2014	deficiency	FALSE	1	1	""	28439				study has no replicates: log2 ratio of normalised counts
+Braynen2025_starvation_Leaf_30min	Braynen2025	starvation	TRUE	3	2	Braynen2025_Leaf_0h_R1	25925	437	275	801	""
+Braynen2025_starvation_Leaf_3h	Braynen2025	starvation	TRUE	3	2	Braynen2025_Leaf_0h_R1	25925	1483	2044	727	""
+Braynen2025_starvation_Leaf_24h	Braynen2025	starvation	TRUE	3	2	Braynen2025_Leaf_0h_R1	25925	333	930	820	""
+Braynen2025_resupply_Leaf_30min	Braynen2025	resupply	TRUE	3	3	""	25925	60	442	588	""
+Braynen2025_resupply_Leaf_24h	Braynen2025	resupply	TRUE	3	3	""	25925	231	492	658	""
+Braynen2025_starvation_Root_30min	Braynen2025	starvation	TRUE	3	3	""	25925	641	327	189	""
+Braynen2025_starvation_Root_3h	Braynen2025	starvation	TRUE	2	3	Braynen2025_Root_3h_R1	25925	285	629	250	""
+Braynen2025_starvation_Root_24h	Braynen2025	starvation	TRUE	3	3	""	25925	481	609	183	""
+Braynen2025_resupply_Root_30min	Braynen2025	resupply	TRUE	3	2	Braynen2025_Root_24p5h_R3	25925	275	424	174	""
+Braynen2025_resupply_Root_24h	Braynen2025	resupply	TRUE	3	2	Braynen2025_Root_48h_R2	25925	752	589	156	""
 Buoso2021_resupply_P0423_Root_24h_100U	Buoso2021	resupply	TRUE	3	3	""	27101	314	299	30	""
 Buoso2021_resupply_P0423_Root_24h_50U50A	Buoso2021	resupply	TRUE	3	3	""	27101	602	617	29	""
 Buoso2021_resupply_P0423_Root_24h_100A	Buoso2021	resupply	TRUE	3	3	""	27101	529	579	37	""
@@ -51,14 +51,14 @@ Cheng2021_field_rate_Mo17_Leaf	Cheng2021	field_rate	TRUE	3	2	""	27696	4	25	840	"
 Cheng2021_field_rate_PH207_Leaf	Cheng2021	field_rate	TRUE	3	3	""	27696	36	748	875	""
 Cheng2021_field_rate_PHG84_Leaf	Cheng2021	field_rate	TRUE	3	3	""	27696	101	292	764	""
 Cheng2021_field_rate_W22_Leaf	Cheng2021	field_rate	TRUE	2	2	Cheng2021_W22_HN_R3	27696	308	428	1390	""
-Du2020_resupply_B73_Root_30min	Du2020	resupply	FALSE	1	1	""	27396				study has no replicates: log2 ratio of normalised counts
-Du2020_resupply_B73_Root_1h	Du2020	resupply	FALSE	1	1	""	27396				study has no replicates: log2 ratio of normalised counts
-Du2020_resupply_B73_Root_1.5h	Du2020	resupply	FALSE	1	1	""	27396				study has no replicates: log2 ratio of normalised counts
-Du2020_resupply_B73_Root_2h	Du2020	resupply	FALSE	1	1	""	27396				study has no replicates: log2 ratio of normalised counts
-Du2020_resupply_B73_Root_3h	Du2020	resupply	FALSE	1	1	""	27396				study has no replicates: log2 ratio of normalised counts
-Du2020_resupply_B73_Root_4h	Du2020	resupply	FALSE	1	1	""	27396				study has no replicates: log2 ratio of normalised counts
-Du2020_resupply_B73_Root_6h	Du2020	resupply	FALSE	1	1	""	27396				study has no replicates: log2 ratio of normalised counts
-Du2020_resupply_B73_Root_8h	Du2020	resupply	FALSE	1	1	""	27396				study has no replicates: log2 ratio of normalised counts
+Du2020_resupply_B73_Root_30min	Du2020	resupply	FALSE	1	1	""	27270				study has no replicates: log2 ratio of normalised counts
+Du2020_resupply_B73_Root_1h	Du2020	resupply	FALSE	1	1	""	27270				study has no replicates: log2 ratio of normalised counts
+Du2020_resupply_B73_Root_1.5h	Du2020	resupply	FALSE	1	1	""	27270				study has no replicates: log2 ratio of normalised counts
+Du2020_resupply_B73_Root_2h	Du2020	resupply	FALSE	1	1	""	27270				study has no replicates: log2 ratio of normalised counts
+Du2020_resupply_B73_Root_3h	Du2020	resupply	FALSE	1	1	""	27270				study has no replicates: log2 ratio of normalised counts
+Du2020_resupply_B73_Root_4h	Du2020	resupply	FALSE	1	1	""	27270				study has no replicates: log2 ratio of normalised counts
+Du2020_resupply_B73_Root_6h	Du2020										no samples left after exclusions
+Du2020_resupply_B73_Root_8h	Du2020	resupply	FALSE	1	1	""	27270				study has no replicates: log2 ratio of normalised counts
 Du2021_deficiency_Qi319_Root	Du2021	deficiency	TRUE	2	2	""	27425	563	527	415	""
 Du2021_deficiency_Qi319_Shoot	Du2021										no samples left after exclusions
 Du2021_deficiency_Ye478_Root	Du2021	deficiency	TRUE	2	2	""	27425	869	709	472	""
@@ -68,24 +68,24 @@ Ge2020_resupply_zmnlp5UFMu-01175_Wholeseedling_30min	Ge2020	resupply	TRUE	2	2	Ge
 Guo2022_deficiency_B73_Leaf-LeafDivision_DivisionZone	Guo2022	deficiency	TRUE	2	2	""	23025	606	986	126	""
 Guo2022_deficiency_B73_Leaf-LeafElongation_ElongationZone	Guo2022	deficiency	TRUE	2	2	""	23025	1102	2596	77	""
 Guo2023_deficiency_B73_Root_72h	Guo2023	deficiency	TRUE	3	3	""	24411	820	240	3	""
-Huang2025_resupply_B73_Shoot_5min	Huang2025	resupply	TRUE	3	3	""	23308	629	174	204	""
+Huang2025_resupply_B73_Shoot_5min	Huang2025	resupply	TRUE	3	3	""	23297	641	177	204	""
 Huang2025_resupply_B73_Shoot_10min	Huang2025										no samples left after exclusions
-Huang2025_resupply_B73_Shoot_15min	Huang2025	resupply	TRUE	3	3	""	23308	365	188	201	""
-Huang2025_resupply_B73_Shoot_20min	Huang2025	resupply	TRUE	3	2	Huang2025_Shoot_plusN_20min_R2	23308	796	532	279	""
-Huang2025_resupply_B73_Shoot_30min	Huang2025	resupply	TRUE	2	3	Huang2025_Shoot_minusN_30min_R2	23308	334	239	302	""
-Huang2025_resupply_B73_Shoot_45min	Huang2025	resupply	TRUE	2	3	Huang2025_Shoot_minusN_45min_R2	23308	681	289	277	""
-Huang2025_resupply_B73_Shoot_1h	Huang2025	resupply	FALSE	1	3	Huang2025_Shoot_minusN_60min_R2;Huang2025_Shoot_minusN_60min_R3	23308				""
-Huang2025_resupply_B73_Shoot_1.5h	Huang2025	resupply	TRUE	3	3	""	23308	168	148	203	""
-Huang2025_resupply_B73_Shoot_2h	Huang2025	resupply	TRUE	3	2	""	23308	41	67	213	""
-Huang2025_resupply_B73_Root_5min	Huang2025	resupply	TRUE	3	3	""	23308	286	299	243	""
-Huang2025_resupply_B73_Root_10min	Huang2025	resupply	TRUE	3	3	""	23308	312	717	204	""
-Huang2025_resupply_B73_Root_15min	Huang2025	resupply	TRUE	3	3	""	23308	1663	1509	139	""
-Huang2025_resupply_B73_Root_20min	Huang2025	resupply	TRUE	3	3	""	23308	1516	1758	471	""
-Huang2025_resupply_B73_Root_30min	Huang2025	resupply	TRUE	3	3	""	23308	816	1454	348	""
-Huang2025_resupply_B73_Root_45min	Huang2025	resupply	TRUE	3	3	""	23308	938	1484	316	""
-Huang2025_resupply_B73_Root_1h	Huang2025	resupply	TRUE	3	3	""	23308	331	330	282	""
-Huang2025_resupply_B73_Root_1.5h	Huang2025	resupply	TRUE	3	3	""	23308	1571	721	180	""
-Huang2025_resupply_B73_Root_2h	Huang2025	resupply	TRUE	4	3	""	23308	1179	481	200	""
+Huang2025_resupply_B73_Shoot_15min	Huang2025	resupply	TRUE	3	3	""	23297	360	195	201	""
+Huang2025_resupply_B73_Shoot_20min	Huang2025	resupply	TRUE	3	2	Huang2025_Shoot_plusN_20min_R2	23297	822	551	278	""
+Huang2025_resupply_B73_Shoot_30min	Huang2025	resupply	TRUE	2	3	Huang2025_Shoot_minusN_30min_R2	23297	336	241	301	""
+Huang2025_resupply_B73_Shoot_45min	Huang2025	resupply	TRUE	2	3	Huang2025_Shoot_minusN_45min_R2	23297	638	299	277	""
+Huang2025_resupply_B73_Shoot_1h	Huang2025	resupply	FALSE	1	3	Huang2025_Shoot_minusN_60min_R2;Huang2025_Shoot_minusN_60min_R3	23297				""
+Huang2025_resupply_B73_Shoot_1.5h	Huang2025	resupply	TRUE	3	3	""	23297	172	154	203	""
+Huang2025_resupply_B73_Shoot_2h	Huang2025	resupply	TRUE	3	2	""	23297	45	68	213	""
+Huang2025_resupply_B73_Root_5min	Huang2025	resupply	TRUE	3	3	""	23297	335	310	246	""
+Huang2025_resupply_B73_Root_10min	Huang2025	resupply	TRUE	3	3	""	23297	343	723	203	""
+Huang2025_resupply_B73_Root_15min	Huang2025	resupply	TRUE	3	3	""	23297	1700	1510	140	""
+Huang2025_resupply_B73_Root_20min	Huang2025	resupply	TRUE	2	3	Huang2025_Root_minusN_20min_R1	23297	1091	1740	286	""
+Huang2025_resupply_B73_Root_30min	Huang2025	resupply	TRUE	2	3	Huang2025_Root_minusN_30min_R2	23297	423	1317	282	""
+Huang2025_resupply_B73_Root_45min	Huang2025	resupply	TRUE	3	3	""	23297	966	1495	326	""
+Huang2025_resupply_B73_Root_1h	Huang2025	resupply	TRUE	3	3	""	23297	355	331	282	""
+Huang2025_resupply_B73_Root_1.5h	Huang2025	resupply	TRUE	3	3	""	23297	1616	724	181	""
+Huang2025_resupply_B73_Root_2h	Huang2025	resupply	TRUE	4	3	""	23297	1220	486	198	""
 Jia2023_starvation_Leaf_3h	Jia2023	starvation	TRUE	3	3	""	28036	57	84	890	""
 Jia2023_starvation_Leaf_12h	Jia2023	starvation	TRUE	3	3	""	28036	2496	2884	804	""
 Jia2023_starvation_Leaf_24h	Jia2023	starvation	TRUE	3	3	""	28036	659	1153	854	""
@@ -104,11 +104,11 @@ Li2022_deficiency_B73_Root	Li2022	deficiency	TRUE	2	2	""	24136	216	150	1	""
 Li2025_excess_B73_Wholeseedling	Li2025	excess	TRUE	3	3	""	26495	1065	1383	598	""
 Li2025_excess_082_Wholeseedling	Li2025	excess	FALSE	3	1	Li2025_082_HN_R1;Li2025_082_HN_R2	26495				""
 Li2025_excess_107_Wholeseedling	Li2025	excess	TRUE	2	2	Li2025_107_No_R3;Li2025_107_HN_R3	26495	578	179	1296	""
-Li2026a_resupply_Root_8h	Li2026a	resupply	TRUE	2	2	Li2026a_Root_CCl_R2;Li2026a_Root_CNO3_R3	27524	829	524	581	""
-Li2026a_resupply_Shoot_8h	Li2026a	resupply	TRUE	3	3	""	27524	1080	361	173	""
-Li2026a_local_Root_8h	Li2026a	local	TRUE	2	2	Li2026a_Root_CCl_R2;Li2026a_Root_SpNO3_R3	27524	1154	788	586	""
-Li2026a_systemic_nitrateSide_Root_8h	Li2026a	local	TRUE	2	2	Li2026a_Root_SpNO3_R3;Li2026a_Root_CNO3_R3	27524	7	10	385	""
-Li2026a_systemic_chlorideSide_Root_8h	Li2026a	local	TRUE	2	3	Li2026a_Root_CCl_R2	27524	5336	5271	555	""
+Li2026a_resupply_Root_8h	Li2026a	resupply	FALSE	1	2	Li2026a_Root_CCl_R1;Li2026a_Root_CCl_R2;Li2026a_Root_CNO3_R3	27419				""
+Li2026a_resupply_Shoot_8h	Li2026a	resupply	TRUE	3	3	""	27419	1041	376	162	""
+Li2026a_local_Root_8h	Li2026a	local	FALSE	1	2	Li2026a_Root_CCl_R1;Li2026a_Root_CCl_R2;Li2026a_Root_SpNO3_R3	27419				""
+Li2026a_systemic_nitrateSide_Root_8h	Li2026a	local	TRUE	2	2	Li2026a_Root_SpNO3_R3;Li2026a_Root_CNO3_R3	27419	9	0	368	""
+Li2026a_systemic_chlorideSide_Root_8h	Li2026a	local	FALSE	1	3	Li2026a_Root_CCl_R1;Li2026a_Root_CCl_R2	27419				""
 Lv2016_deficiency_B73_Leaf	Lv2016	deficiency	FALSE	1	1	""	22080				study has no replicates: log2 ratio of normalised counts
 Ma2021a_deficiency_P178_Leaf	Ma2021a	deficiency	TRUE	3	3	""	25982	1279	1755	541	""
 Ma2021a_deficiency_P178_Root	Ma2021a										no samples left after exclusions
@@ -125,10 +125,10 @@ Singh2022_deficiency_DMI81_Root	Singh2022										no samples left after exclusi
 Singh2022_deficiency_DMI81_Leaf	Singh2022	deficiency	FALSE	1	1	""	28722				study has no replicates: log2 ratio of normalised counts
 Singh2022_deficiency_DMI56_Root	Singh2022										no samples left after exclusions
 Singh2022_deficiency_DMI56_Leaf	Singh2022	deficiency	FALSE	1	1	""	28722				study has no replicates: log2 ratio of normalised counts
-TorresRodriguez2021_deficiency_W22_Leaf_FullP	TorresRodriguez2021	deficiency	TRUE	2	2	""	25054	1037	1775	619	""
+TorresRodriguez2021_deficiency_W22_Leaf_FullP	TorresRodriguez2021	deficiency	TRUE	2	2	""	24956	966	1734	599	""
 TorresRodriguez2021_deficiency_W22_Leaf_LowP	TorresRodriguez2021										no samples left after exclusions
 TorresRodriguez2021_deficiency_W22_Root_FullP	TorresRodriguez2021										no samples left after exclusions
-TorresRodriguez2021_deficiency_W22_Root_LowP	TorresRodriguez2021	deficiency	TRUE	2	2	""	25054	84	481	251	""
+TorresRodriguez2021_deficiency_W22_Root_LowP	TorresRodriguez2021	deficiency	TRUE	2	2	""	24956	79	477	244	""
 Wang2019_form_Root_mixed	Wang2019	form	TRUE	3	3	""	26337	284	656	120	""
 Wang2019_form_Root_ammonium	Wang2019	form	TRUE	3	3	""	26337	302	656	123	""
 Wang2019_form_Shoot_mixed	Wang2019	form	TRUE	3	3	""	26337	659	427	125	""
@@ -139,14 +139,14 @@ Wang2022_resupply_B73_Root-PrimaryRoot_24h	Wang2022	resupply	TRUE	3	3	""	26491	1
 Wang2022_resupply_B73_Root-PrimaryRoot_72h	Wang2022	resupply	TRUE	3	3	""	26491	3	33	88	""
 Wang2025b_deficiency_ND101_Leaf	Wang2025b	deficiency	TRUE	3	3	""	23861	103	93	38	""
 Wang2025b_deficiency_Zmnrt2.5-1_Leaf	Wang2025b	deficiency	TRUE	3	3	""	23861	1705	1459	27	""
-Wu2024_resupply_Mo17_Root_30min	Wu2024	resupply	FALSE	1	1	""	27959				study has no replicates: log2 ratio of normalised counts
-Wu2024_resupply_Mo17_Root_1h	Wu2024	resupply	FALSE	1	1	""	27959				study has no replicates: log2 ratio of normalised counts
-Wu2024_resupply_Mo17_Root_1.5h	Wu2024	resupply	FALSE	1	1	""	27959				study has no replicates: log2 ratio of normalised counts
-Wu2024_resupply_Mo17_Root_2h	Wu2024	resupply	FALSE	1	1	""	27959				study has no replicates: log2 ratio of normalised counts
-Wu2024_resupply_Mo17_Root_3h	Wu2024	resupply	FALSE	1	1	""	27959				study has no replicates: log2 ratio of normalised counts
-Wu2024_resupply_Mo17_Root_4h	Wu2024	resupply	FALSE	1	1	""	27959				study has no replicates: log2 ratio of normalised counts
-Wu2024_resupply_Mo17_Root_6h	Wu2024	resupply	FALSE	1	1	""	27959				study has no replicates: log2 ratio of normalised counts
-Wu2024_resupply_Mo17_Root_8h	Wu2024	resupply	FALSE	1	1	""	27959				study has no replicates: log2 ratio of normalised counts
+Wu2024_resupply_Mo17_Root_30min	Wu2024	resupply	FALSE	1	1	""	27922				study has no replicates: log2 ratio of normalised counts
+Wu2024_resupply_Mo17_Root_1h	Wu2024	resupply	FALSE	1	1	""	27922				study has no replicates: log2 ratio of normalised counts
+Wu2024_resupply_Mo17_Root_1.5h	Wu2024	resupply	FALSE	1	1	""	27922				study has no replicates: log2 ratio of normalised counts
+Wu2024_resupply_Mo17_Root_2h	Wu2024										no samples left after exclusions
+Wu2024_resupply_Mo17_Root_3h	Wu2024	resupply	FALSE	1	1	""	27922				study has no replicates: log2 ratio of normalised counts
+Wu2024_resupply_Mo17_Root_4h	Wu2024	resupply	FALSE	1	1	""	27922				study has no replicates: log2 ratio of normalised counts
+Wu2024_resupply_Mo17_Root_6h	Wu2024	resupply	FALSE	1	1	""	27922				study has no replicates: log2 ratio of normalised counts
+Wu2024_resupply_Mo17_Root_8h	Wu2024	resupply	FALSE	1	1	""	27922				study has no replicates: log2 ratio of normalised counts
 Yu2015_local_B73_Root_24h	Yu2015	local	TRUE	4	4	""	22144	306	1213	2	""
 Yu2016_local_B73_Root-PhloemPole_Primary_24h	Yu2016	local	TRUE	3	3	""	19538	47	355	616	""
 Yu2016_local_B73_Root-PhloemPole_Seminal_24h	Yu2016	local	TRUE	3	3	""	19538	876	183	600	""

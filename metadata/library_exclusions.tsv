@@ -3,6 +3,10 @@ AlonsoNieves2022	AlonsoNieves2022_hom_leaf_LowNP_R1	70.5% mapped vs 85.8% median
 AlonsoNieves2022	AlonsoNieves2022_hom_leaf_LowNP_R2	74.0% mapped vs 85.8% median for its study, tissue and genotype
 AlonsoNieves2022	AlonsoNieves2022_hom_leaf_LowP_R1	74.9% mapped vs 85.8% median for its study, tissue and genotype
 AlonsoNieves2022	AlonsoNieves2022_hom_root_LowP_R2	61.7% mapped vs 77.9% median for its study, tissue and genotype
+Bi2014	Bi2014_SRG100_root_HN	leaf carry-over: leaf markers 2.08% of mRNA vs 0.12% study and tissue median (16.5x; no replicates; 85% of markers >= 3x)
+Braynen2025	Braynen2025_Leaf_0h_R1	root carry-over: root markers 3.38% of mRNA vs 0.37% study and tissue median (9.0x; 9.9x its replicates; 29% of markers >= 3x)
+Braynen2025	Braynen2025_Root_24p5h_R3	leaf carry-over: leaf markers 2.10% of mRNA vs 0.31% study and tissue median (6.7x; 6.6x its replicates; 85% of markers >= 3x)
+Braynen2025	Braynen2025_Root_3h_R1	leaf carry-over: leaf markers 1.29% of mRNA vs 0.31% study and tissue median (4.1x; 12.8x its replicates; 57% of markers >= 3x)
 Braynen2025	Braynen2025_Root_48h_R2	disagrees with its replicates: r = 0.946 with them vs 0.981 among them (study within-group median 0.978)
 Cao2024	Cao2024_zmnlp31_KCl_R3	disagrees with its replicates: r = 0.948 with them vs 0.982 among them (study within-group median 0.980)
 Cheng2021	Cheng2021_B73xIHP1_LN_R3	46.0% mapped (< 60%); library type U vs study SR
@@ -23,10 +27,13 @@ Cheng2021	Cheng2021_B73xPHG84_LN_R3	58.1% mapped (< 60%)
 Cheng2021	Cheng2021_ILP1_HN_R2	45.1% mapped (< 60%); library type U vs study SR
 Cheng2021	Cheng2021_PH207_LN_R3b	disagrees with its replicates: r = 0.623 with them vs 0.960 among them (study within-group median 0.967)
 Cheng2021	Cheng2021_W22_HN_R3	70.9% mapped vs 83.3% median for its study, tissue and genotype
+Du2020	Du2020_B73_LN_6h	leaf carry-over: leaf markers 2.19% of mRNA vs 0.12% study and tissue median (17.1x; no replicates; 95% of markers >= 3x)
 Du2021	Du2021_Qi319_shoot_LN_R1	its 2 replicates disagree: r = 0.848 vs study within-group median 0.985
 Du2021	Du2021_Qi319_shoot_LN_R2	its 2 replicates disagree: r = 0.848 vs study within-group median 0.985
 Ge2020	Ge2020_zmnlp5_minusN_R1	disagrees with its replicates: r = 0.943 with them vs 0.993 among them (study within-group median 0.984)
 Ge2020	Ge2020_zmnlp5_plusN_R1	disagrees with its replicates: r = 0.797 with them vs 0.995 among them (study within-group median 0.984)
+Huang2025	Huang2025_Root_minusN_20min_R1	leaf carry-over: leaf markers 8.13% of mRNA vs 1.92% study and tissue median (4.2x; 8.2x its replicates; 69% of markers >= 3x)
+Huang2025	Huang2025_Root_minusN_30min_R2	leaf carry-over: leaf markers 6.89% of mRNA vs 1.92% study and tissue median (3.6x; 5.9x its replicates; 60% of markers >= 3x)
 Huang2025	Huang2025_Shoot_minusN_10min_R1	1.2 M mapped reads (< 2 M)
 Huang2025	Huang2025_Shoot_minusN_10min_R2	1.8 M mapped reads (< 2 M)
 Huang2025	Huang2025_Shoot_minusN_10min_R3	1.9 M mapped reads (< 2 M)
@@ -39,9 +46,11 @@ Li2025	Li2025_082_HN_R1	disagrees with its replicates: r = 0.823 with them vs 0.
 Li2025	Li2025_082_HN_R2	disagrees with its replicates: r = 0.829 with them vs 0.871 among them (study within-group median 0.922)
 Li2025	Li2025_107_HN_R3	disagrees with its replicates: r = 0.715 with them vs 0.963 among them (study within-group median 0.922)
 Li2025	Li2025_107_No_R3	disagrees with its replicates: r = 0.800 with them vs 0.953 among them (study within-group median 0.922)
+Li2026a	Li2026a_Root_CCl_R1	leaf carry-over: leaf markers 1.11% of mRNA vs 0.07% study and tissue median (13.9x; 13.8x its replicates; 91% of markers >= 3x)
 Li2026a	Li2026a_Root_CCl_R2	disagrees with its replicates: r = 0.825 with them vs 0.976 among them (study within-group median 0.978)
 Li2026a	Li2026a_Root_CNO3_R3	64.1% mapped vs 74.5% median for its study, tissue and genotype
 Li2026a	Li2026a_Root_SpNO3_R3	disagrees with its replicates: r = 0.866 with them vs 0.979 among them (study within-group median 0.978)
+Li2026a	Li2026a_Shoot_Split_R2	root carry-over: root markers 17.49% of mRNA vs 2.84% study and tissue median (6.1x; 6.6x its replicates; 85% of markers >= 3x)
 Ma2021a	Ma2021a_HN_root_R1	57.2% mapped (< 60%)
 Ma2021a	Ma2021a_HN_root_R2	52.7% mapped (< 60%)
 Ma2021a	Ma2021a_HN_root_R3	58.7% mapped (< 60%)
@@ -56,5 +65,7 @@ TorresRodriguez2021	TorresRodriguez2021_WT_leaf_LowP_R1	55.4% mapped (< 60%)
 TorresRodriguez2021	TorresRodriguez2021_WT_leaf_LowP_R2	55.1% mapped (< 60%)
 TorresRodriguez2021	TorresRodriguez2021_WT_root_Full_R1	its 2 replicates disagree: r = 0.923 vs study within-group median 0.979
 TorresRodriguez2021	TorresRodriguez2021_WT_root_Full_R2	its 2 replicates disagree: r = 0.923 vs study within-group median 0.979
+TorresRodriguez2021	TorresRodriguez2021_WT_root_LowN_R2	leaf carry-over: leaf markers 0.66% of mRNA vs 0.06% study and tissue median (9.0x; 7.5x its replicates; 42% of markers >= 3x)
+Wu2024	Wu2024_Mo17_LN_2h	leaf carry-over: leaf markers 0.94% of mRNA vs 0.19% study and tissue median (4.7x; no replicates; 70% of markers >= 3x)
 Yu2016	Yu2016_BR_LN_R3	disagrees with its replicates: r = 0.845 with them vs 0.965 among them (study within-group median 0.950)
 Yu2016	Yu2016_CR_HN_R1	disagrees with its replicates: r = 0.918 with them vs 0.958 among them (study within-group median 0.950)
