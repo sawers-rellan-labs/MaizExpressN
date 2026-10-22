@@ -15,6 +15,9 @@ Each study is analysed on its own with DESeq2 (`~ 0 + group`), one Wald test per
 ### Pooling
 Counts are never pooled across studies, only effect sizes. Contrasts that share study, tissue group and class are first combined by inverse variance, so one study counts once; studies are then combined with DerSimonian–Laird random effects (pooled log2FC, 95% CI, p, τ², I²). “All N levels” pools every class except N form. Gene lookup and Gene list pool on the fly under the current filters; Rank genes uses precomputed tables (all genotypes or B73 only).
 
+### Co-expression
+Two genes are compared in two ways. **Across samples**: within each study and tissue group, the Pearson correlation of log2(TPM + 1) over its libraries (a library missing from the TPM tables counts as 0). With “within conditions”, each condition group’s mean is removed first, which gives the partial correlation given the condition, so a shared response to the N treatment does not count. Fisher-z standard errors are 1/√(n − 3) across all libraries and 1/√(n − g − 2) within conditions (g condition groups). Units where either gene has a mean TPM below the threshold, or with fewer than three residual degrees of freedom, are left out. Studies are pooled with DerSimonian–Laird random effects on Fisher z, by tissue group and overall. **Across contrasts**: each point is a contrast where both genes were tested, with its two log2FC values; contrasts from one study share libraries and controls, so the Pearson and Spearman correlations there are descriptive. The sidebar’s tissue, growth-system, B73-only and excluded-study filters apply to the sample view; all filters apply to the contrast view.
+
 ### Gene annotation
 MaizeGDB Zm00001eb.1 symbols, names, gene products and GO terms; v3/v4 cross-references from MaizeGDB; Arabidopsis orthologs and gene features from Ensembl Plants. Descriptions marked “predicted” come from MaizeGDB's EnTAP annotation.
 

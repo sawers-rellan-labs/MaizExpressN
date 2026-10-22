@@ -45,7 +45,7 @@ with the `app/` folder. Do a public build (`MAIZEXPRESSN_PUBLIC=1`) if any study
 | `results/` | Per-study gene tables copied from Hazel (`results/<study>/`), `de.parquet` (M4), `meta_*.parquet` (M6), validation notes |
 | `annotation/` | Gene annotation (M5): sources in `annotation/source/`, `genes.parquet`, `gene_aliases.parquet`, `go_terms.parquet` |
 | `analysis/` | `de_per_study.R` (DESeq2 per study) and `pool_meta.R` (pooling across studies) |
-| `app/` | The Shiny app (`app.R`, `R/`, `www/`, `methods.md`) and `prepare_data.R` |
+| `app/` | The Shiny app (`app.R`, `R/`, `www/`, `methods.md`) and `prepare_data.R`. Pages: Gene lookup, Gene list, Co-expression, Rank genes, Studies, Methods |
 | `tests/` | testthat suite: `Rscript tests/testthat.R` |
 
 ## Rebuild everything after a change

@@ -76,6 +76,34 @@ genelist_page <- nav_panel(
        plotlyOutput("heat", height = "auto"))
 )
 
+coexpr_page <- nav_panel(
+  "Co-expression", value = "coexpr",
+  card(class = "searchcard",
+    layout_columns(col_widths = c(5, 5, 2),
+      selectizeInput("cg_a", "Gene A", choices = NULL, width = "100%",
+                     options = list(placeholder = "Search gene A", maxOptions = 40, searchField = c("label", "search"), loadThrottle = 250)),
+      selectizeInput("cg_b", "Gene B", choices = NULL, width = "100%",
+                     options = list(placeholder = "Search gene B", maxOptions = 40, searchField = c("label", "search"), loadThrottle = 250)),
+      div(input_switch("cg_within", "Within conditions", FALSE),
+          numericInput("cg_min", "Min mean TPM", 1, min = 0, step = 0.5, width = "100%"))),
+    p(class = "hint", "Across samples: correlation of log2(TPM + 1) over the libraries of each study and tissue, pooled across studies. ",
+      "\u201cWithin conditions\u201d removes each condition group\u2019s mean first, so a shared response to the N treatment does not count. ",
+      "Across contrasts: the two genes\u2019 log2FC in every contrast where both were tested.")),
+  layout_columns(col_widths = c(6, 6),
+    card(full_screen = TRUE, card_header("Co-expression across samples, by study", span(class = "hint", "r with 95% CI · diamonds: pooled (random effects)")),
+         plotlyOutput("cx_forest", height = "auto"), uiOutput("cx_note")),
+    card(full_screen = TRUE, card_header("Libraries of one study"),
+         selectInput("cx_study", NULL, choices = NULL), plotlyOutput("cx_scatter", height = "auto"),
+         p(class = "hint", "Colour: red = lowest N level in the study, blue = highest. Shape: tissue."))),
+  layout_columns(col_widths = c(7, 5),
+    card(full_screen = TRUE, card_header("Co-response across contrasts", span(class = "hint", "each point is a contrast")),
+         input_switch("cr_all", "Include unreplicated contrasts", FALSE),
+         plotlyOutput("cr_plot", height = "auto"),
+         p(class = "hint", "Contrasts from one study share libraries and controls, so the points are not independent: read the correlation as descriptive.")),
+    card(card_header("Summary", downloadButton("dl_cx", "Download CSV", class = "btn-sm")),
+         tags$h6("Across contrasts"), DTOutput("cr_table"), tags$h6("Across samples, by study"), DTOutput("cx_table")))
+)
+
 rank_page <- nav_panel(
   "Rank genes", value = "rank",
   card(card_header("Rank genes", span(class = "hint", "precomputed pooling: only the B73-only filter applies here")),
@@ -101,7 +129,7 @@ methods_page <- nav_panel("Methods", value = "methods", card(class = "methods", 
 ui <- page_navbar(
   id = "nav", title = span(class = "brand", "MaizExpressN"), theme = theme, sidebar = filters, fillable = FALSE,
   header = tags$head(tags$link(rel = "stylesheet", href = "styles.css")),
-  lookup_page, genelist_page, rank_page, studies_page, methods_page,
+  lookup_page, genelist_page, coexpr_page, rank_page, studies_page, methods_page,
   nav_spacer(), nav_item(span(class = "built", paste("data", BUILT)))
 )
 
@@ -229,6 +257,78 @@ server <- function(input, output, session) {
                                         options = list(pageLength = 15, scrollX = TRUE, dom = "ftip")))
   output$dl_gene <- downloadHandler(filename = function() paste0("MaizExpressN_", gene(), ".csv"),
                                     content = function(f) fwrite(res_tab()[, `log2FC sign` := sign_lab(sign())], f))
+
+  # ---- co-expression
+  cx_default <- c(a = "Zm00001eb255880", b = "Zm00001eb176470")   # nii1, nnr1
+  updateSelectizeInput(session, "cg_a", choices = choices, server = TRUE, selected = cx_default[["a"]])
+  updateSelectizeInput(session, "cg_b", choices = choices, server = TRUE, selected = cx_default[["b"]])
+  ga <- reactive({ g <- input$cg_a; if (is.null(g) || !nzchar(g)) cx_default[["a"]] else g })
+  gb <- reactive({ g <- input$cg_b; if (is.null(g) || !nzchar(g)) cx_default[["b"]] else g })
+  short_name <- function(g) { x <- GENES[.(g)]; if (nrow(x) && nzchar(x$symbol)) x$symbol else g }
+  # libraries under the sidebar filters that apply to samples (contrast class and time apply to contrasts only)
+  cx_samples <- reactive({
+    s <- SAMPLES[tissue_group %in% input$f_tissue & study_id %in% STUDIES[system_group %in% input$f_system, study_id]]
+    if (isTRUE(input$f_b73)) s <- s[genotype_class == "B73"]
+    if (length(input$f_exclude)) s <- s[!(study_id %in% input$f_exclude)]
+    s
+  })
+  tpa <- reactive(get_tpm(ga())); tpb <- reactive(get_tpm(gb()))
+  cx_u <- reactive(coexpr_units(tpa(), tpb(), cx_samples(), isTRUE(input$cg_within), max(0, input$cg_min %||% 1)))
+  cx_P <- reactive(pool_r(cx_u()))
+  output$cx_forest <- renderPlotly(coexpr_forest(cx_u(), cx_P(), short_name(ga()), short_name(gb())))
+  output$cx_note <- renderUI({
+    u <- cx_u(); if (!nrow(u)) return(NULL)
+    out <- u[!is.finite(r)]
+    why <- if (nrow(out)) paste0(" Left out: ", paste(sprintf("%s %s (%s)", out$study_id, tolower(out$tissue_group), out$reason), collapse = "; "), ".") else ""
+    p(class = "hint", sprintf("%d study \u00d7 tissue units shown.%s", u[is.finite(r), .N], why))
+  })
+  observe({
+    u <- cx_u()[is.finite(r)]
+    ch <- unique(u$study_id)
+    cur <- isolate(input$cx_study)
+    updateSelectInput(session, "cx_study", choices = ch,
+                      selected = if (!is.null(cur) && cur %in% ch) cur else if (nrow(u)) u[which.max(n), study_id] else character())
+  })
+  output$cx_scatter <- renderPlotly({
+    req(input$cx_study)
+    x <- cx_samples()[study_id == input$cx_study]
+    x[tpa(), a := i.tpm, on = "sample_id"]; x[tpb(), b := i.tpm, on = "sample_id"]
+    x[is.na(a), a := 0]; x[is.na(b), b := 0]
+    x[, `:=`(la_ = log2(a + 1), lb_ = log2(b + 1))]
+    coexpr_scatter(x, short_name(ga()), short_name(gb()), isTRUE(input$cg_within))
+  })
+  cr <- reactive(coresponse(get_de(ga()), get_de(gb()), allowed(), !isTRUE(input$cr_all)))
+  output$cr_plot <- renderPlotly(coresponse_plot(cr(), short_name(ga()), short_name(gb()), sign()))
+  cr_sum <- reactive(coresponse_summary(cr()))
+  output$cr_table <- renderDT({
+    s <- cr_sum(); if (!nrow(s)) return(datatable(data.table(note = "fewer than 3 shared contrasts"), rownames = FALSE, options = list(dom = "t")))
+    datatable(s[, .(tissue = tissue_group, contrasts, studies, Pearson = round(pearson, 2), Spearman = round(spearman, 2),
+                    `same direction` = paste0(round(100 * same_sign), "%"))], rownames = FALSE, class = "compact", options = list(dom = "t", scrollX = TRUE))
+  })
+  output$cx_table <- renderDT({
+    u <- cx_u()[is.finite(r)]; P <- cx_P()
+    if (!nrow(u)) return(datatable(data.table(note = "no study with both genes expressed"), rownames = FALSE, options = list(dom = "t")))
+    t <- rbind(P[, .(unit = paste0("Pooled · ", tissue_group), libraries = n, studies = k, r = round(r, 2),
+                     CI = sprintf("%.2f to %.2f", lo, hi), p = signif(p, 2))],
+               u[, .(unit = paste(study_id, tissue_group, sep = " · "), libraries = n, studies = 1L, r = round(r, 2),
+                     CI = sprintf("%.2f to %.2f", lo, hi), p = signif(p, 2))])
+    datatable(t, rownames = FALSE, class = "compact stripe", options = list(dom = "tp", pageLength = 12, scrollX = TRUE))
+  })
+  output$dl_cx <- downloadHandler(
+    filename = function() sprintf("MaizExpressN_coexpression_%s_%s.csv", short_name(ga()), short_name(gb())),
+    content = function(f) {
+      u <- cx_u(); P <- cx_P(); s <- cr_sum()
+      out <- rbind(
+        u[, .(view = "across samples", unit = paste(study_id, tissue_group, sep = " · "), n_libraries = n, n_contrasts = NA_integer_, k_studies = 1L,
+              r = r, ci_low = lo, ci_high = hi, p = p, spearman = rho, note = reason)],
+        P[, .(view = "across samples, pooled", unit = tissue_group, n_libraries = n, n_contrasts = NA_integer_, k_studies = k,
+              r = r, ci_low = lo, ci_high = hi, p = p, spearman = NA_real_, note = ifelse(is.na(i2), "", paste0("I2 = ", round(i2, 2))))],
+        if (nrow(s)) s[, .(view = "across contrasts", unit = tissue_group, n_libraries = NA_integer_, n_contrasts = contrasts, k_studies = studies,
+                           r = pearson, ci_low = NA_real_, ci_high = NA_real_, p = NA_real_, spearman = spearman,
+                           note = paste0(round(100 * same_sign), "% same direction"))])
+      out[, `:=`(gene_a = ga(), gene_b = gb(), within_conditions = isTRUE(input$cg_within))]
+      fwrite(out, f)
+    })
 
   # ---- gene list
   gl <- eventReactive(input$gl_go, ignoreNULL = FALSE, {
