@@ -89,6 +89,15 @@ coexpr_page <- nav_panel(
     p(class = "hint", "Across samples: correlation of log2(TPM + 1) over the libraries of each study and tissue, pooled across studies. ",
       "\u201cWithin conditions\u201d removes each condition group\u2019s mean first, so a shared response to the N treatment does not count. ",
       "Across contrasts: the two genes\u2019 log2FC in every contrast where both were tested.")),
+  card(card_header(textOutput("pt_title", inline = TRUE), span(class = "hint", "precomputed \u00b7 click a row to make it gene B"),
+                   downloadButton("dl_pt", "Download CSV", class = "btn-sm")),
+    radioButtons("pt_scope", NULL, c("All tissues" = "All", "Root" = "Root", "Leaf" = "Leaf"), inline = TRUE),
+    navset_underline(
+      nav_panel("Positively co-expressed", div(class = "pt-tables", DTOutput("pt_pos"))),
+      nav_panel("Negatively co-expressed", div(class = "pt-tables", DTOutput("pt_neg")))),
+    p(class = "hint", "Pooled r across study \u00d7 tissue units (k: units where both genes are expressed), computed as below with min mean TPM 1 and without the sidebar filters; ",
+      "follows the \u201cWithin conditions\u201d switch. A pair is ranked only when at least half of the units in the scope express both genes. ",
+      "Very long transcripts, and neighbouring paralogs that share reads, can co-vary for technical reasons: \u201cnearby\u201d marks partners within 100 kb.")),
   layout_columns(col_widths = c(6, 6),
     card(full_screen = TRUE, card_header("Co-expression across samples, by study", span(class = "hint", "r with 95% CI · diamonds: pooled (random effects)")),
          plotlyOutput("cx_forest", height = "auto"), uiOutput("cx_note")),
@@ -272,6 +281,45 @@ server <- function(input, output, session) {
     if (length(input$f_exclude)) s <- s[!(study_id %in% input$f_exclude)]
     s
   })
+  # strongest partners of gene A (precomputed); a click on a row makes the partner gene B
+  pt_all <- reactive(get_partners(ga()))
+  pt <- reactive({
+    p <- pt_all(); if (!nrow(p)) return(p)
+    p <- p[scope == input$pt_scope & view == if (isTRUE(input$cg_within)) "within" else "across"][order(direction, rank)]
+    g <- GENES[.(p$partner_id)]; a <- GENES[.(ga())]
+    d <- ifelse(g$chrom == a$chrom, pmax(0, pmax(g$start, a$start) - pmin(g$end, a$end)) / 1e3, Inf)
+    p[, `:=`(symbol = fifelse(is.na(g$symbol), "", g$symbol), description = fifelse(is.na(g$description), "", g$description),
+             nearby = fifelse(!is.na(d) & d < 100, sprintf("%.0f kb", d), ""))]
+  })
+  output$pt_title <- renderText(paste("Strongest partners of", short_name(ga())))
+  pt_dt <- function(d) {
+    if (!nrow(d)) return(datatable(data.table(note = sprintf(
+      "No list for %s here: it needs mean TPM \u2265 1 in at least half of the study \u00d7 tissue units in this scope.", short_name(ga()))),
+      rownames = FALSE, selection = "none", options = list(dom = "t")))
+    esc <- htmltools::htmlEscape
+    short <- fifelse(nchar(d$description) > 60, paste0(substr(d$description, 1, 59), "\u2026"), d$description)
+    datatable(d[, .(`#` = rank,
+                    gene = esc(fifelse(nzchar(symbol), symbol, "\u2013")), `gene ID` = partner_id,
+                    description = sprintf('<span title="%s">%s</span>', esc(description), esc(short)),
+                    `r [95% CI]` = sprintf("%.2f [%.2f, %.2f]", r, lo, hi), k = units, nearby)],
+              rownames = FALSE, escape = FALSE, selection = "single", class = "compact stripe hover nowrap",
+              options = list(dom = "tp", pageLength = 10, ordering = FALSE, scrollX = TRUE))
+  }
+  output$pt_pos <- renderDT(pt_dt(pt()[direction == "+"]))
+  output$pt_neg <- renderDT(pt_dt(pt()[direction == "-"]))
+  pick_partner <- function(dir, i) {
+    d <- pt()[direction == dir]
+    if (length(i) && i <= nrow(d)) updateSelectizeInput(session, "cg_b", choices = choices, server = TRUE, selected = d$partner_id[i])
+  }
+  observeEvent(input$pt_pos_rows_selected, pick_partner("+", input$pt_pos_rows_selected))
+  observeEvent(input$pt_neg_rows_selected, pick_partner("-", input$pt_neg_rows_selected))
+  output$dl_pt <- downloadHandler(
+    filename = function() sprintf("MaizExpressN_partners_%s_%s_%s.csv", short_name(ga()), input$pt_scope,
+                                  if (isTRUE(input$cg_within)) "within" else "across"),
+    content = function(f) fwrite(pt()[, .(gene_id, scope, view = fifelse(view == "within", "within conditions", "across all libraries"),
+                                          direction = fifelse(direction == "+", "positive", "negative"), rank, partner_id,
+                                          partner_symbol = symbol, units, r, ci_low = lo, ci_high = hi, i2, nearby, partner_description = description)], f))
+
   tpa <- reactive(get_tpm(ga())); tpb <- reactive(get_tpm(gb()))
   cx_u <- reactive(coexpr_units(tpa(), tpb(), cx_samples(), isTRUE(input$cg_within), max(0, input$cg_min %||% 1)))
   cx_P <- reactive(pool_r(cx_u()))

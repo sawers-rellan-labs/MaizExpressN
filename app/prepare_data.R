@@ -18,6 +18,7 @@
 #   app/data/meta_tissue_class.parquet, meta_tissue_level.parquet       (pooling, M6)
 #   app/data/de/<bucket>.parquet   results/de.parquet split by gene bucket
 #   app/data/tpm/<bucket>.parquet  gene x sample TPM and estimated counts (included, non-excluded samples)
+# Then run app/prepare_partners.R: it builds app/data/partners/ (co-expression partner lists) from these tables.
 
 suppressPackageStartupMessages({ library(data.table); library(arrow) })
 out <- "app/data"

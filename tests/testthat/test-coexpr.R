@@ -70,3 +70,29 @@ test_that("co-response pairs the two genes contrast by contrast", {
   s <- e$coresponse_summary(x)
   expect_equal(s[tissue_group == "All", pearson], cor(x$a, x$b))
 })
+
+test_that("precomputed partner lists match the two-gene view and are well formed", {
+  e <- app_env()
+  skip_if_not(dir.exists(file.path(ROOT, "app", "data", "partners")), "partner lists not built")
+  p <- e$get_partners(GENE[["nii1"]])
+  expect_setequal(unique(p$scope), c("All", "Root", "Leaf"))
+  expect_false(any(p$partner_id == GENE[["nii1"]]))
+  for (s in split(p, by = c("scope", "view", "direction"))) {
+    expect_equal(s$rank[order(s$rank)], seq_len(nrow(s)))
+    s <- s[order(rank)]
+    expect_true(all(diff(if (s$direction[1] == "+") -s$r else s$r) >= -1e-9))   # ranked by pooled r
+    expect_lte(nrow(s), 25)
+  }
+  # the top entries agree with coexpr_units + pool_r on the same libraries
+  chk <- p[rank <= 2]
+  for (i in seq_len(nrow(chk))) {
+    smp <- if (chk$scope[i] == "All") e$SAMPLES else e$SAMPLES[tissue_group == chk$scope[i]]
+    u <- e$coexpr_units(e$get_tpm(GENE[["nii1"]]), e$get_tpm(chk$partner_id[i]), smp, chk$view[i] == "within", 1)
+    P <- e$pool_r(u)[tissue_group == "All"]
+    expect_equal(P$k, chk$units[i])
+    expect_equal(P$r, chk$r[i], tolerance = 1e-3)
+    expect_equal(P$lo, chk$lo[i], tolerance = 1e-3)
+  }
+  # nitrate assimilation partners: nii1 with nii2 (paralog) among its strongest root partners across libraries
+  expect_true("Zm00001eb193660" %in% p[scope == "Root" & view == "across" & direction == "+", partner_id])
+})

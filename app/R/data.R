@@ -53,6 +53,14 @@ get_tpm <- function(gid) {
   as.data.table(arrow::read_parquet(f))[gene_id == gid]
 }
 
+# strongest co-expression partners (app/prepare_partners.R); partner IDs are stored as their number
+get_partners <- function(gid) {
+  f <- file.path(DATA_DIR, "partners", paste0(bucket(gid), ".parquet"))
+  if (!file.exists(f)) return(data.table())
+  x <- as.data.table(arrow::read_parquet(f))[gene_id == gid]
+  x[, partner_id := sprintf("Zm00001eb%06d", partner)][, partner := NULL][]
+}
+
 # gene search: exact alias match first, then prefix and description matches
 search_genes <- function(q, limit = 50) {
   q <- trimws(tolower(q)); if (nchar(q) < 2) return(character())

@@ -43,3 +43,5 @@ table.dataTable { font-variant-numeric: tabular-nums; font-size: 0.84rem; }
 .legend .lg { display: inline-flex; align-items: center; gap: 5px; }
 .legend .sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
 .legend .sw.open { border: 1.6px solid var(--muted); background: #FFFFFF; }
+.pt-tables table.dataTable { font-size: 0.82rem; }
+.pt-tables table.dataTable tbody tr { cursor: pointer; }

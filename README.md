@@ -17,7 +17,7 @@ Rscript -e 'shiny::runApp("app", launch.browser = TRUE)'
 ```
 
 Run from the project root (the renv library activates there). The app reads `app/data/`, built by
-`app/prepare_data.R`; set `MAIZEXPRESSN_DATA` to use a data folder elsewhere.
+`app/prepare_data.R` and `app/prepare_partners.R`; set `MAIZEXPRESSN_DATA` to use a data folder elsewhere.
 
 ## Deploy to Posit Connect Cloud
 
@@ -31,7 +31,7 @@ rsconnect::connectCloudUser()                               # once: authorise th
 rsconnect::deployApp(appDir = "app", appName = "maizexpressn")  # upload app/ (about 430 MB) and publish
 ```
 
-Re-run `deployApp()` after `Rscript app/prepare_data.R` to update the live app. For publishing from
+Re-run `deployApp()` after `Rscript app/prepare_data.R` and `Rscript app/prepare_partners.R` to update the live app. For publishing from
 GitHub instead, refresh `app/manifest.json` with `rsconnect::writeManifest(appDir = "app")` and commit it
 with the `app/` folder. Do a public build (`MAIZEXPRESSN_PUBLIC=1`) if any study is marked private.
 
@@ -45,7 +45,7 @@ with the `app/` folder. Do a public build (`MAIZEXPRESSN_PUBLIC=1`) if any study
 | `results/` | Per-study gene tables copied from Hazel (`results/<study>/`), `de.parquet` (M4), `meta_*.parquet` (M6), validation notes |
 | `annotation/` | Gene annotation (M5): sources in `annotation/source/`, `genes.parquet`, `gene_aliases.parquet`, `go_terms.parquet` |
 | `analysis/` | `de_per_study.R` (DESeq2 per study) and `pool_meta.R` (pooling across studies) |
-| `app/` | The Shiny app (`app.R`, `R/`, `www/`, `methods.md`) and `prepare_data.R`. Pages: Gene lookup, Gene list, Co-expression, Rank genes, Studies, Methods |
+| `app/` | The Shiny app (`app.R`, `R/`, `www/`, `methods.md`) `prepare_data.R` and `prepare_partners.R`. Pages: Gene lookup, Gene list, Co-expression, Rank genes, Studies, Methods |
 | `tests/` | testthat suite: `Rscript tests/testthat.R` |
 
 ## Rebuild everything after a change
@@ -62,6 +62,7 @@ Rscript analysis/de_per_study.R
 Rscript analysis/pool_meta.R
 python3 annotation/build_genes.py && Rscript annotation/build_parquet.R
 Rscript app/prepare_data.R
+Rscript app/prepare_partners.R   # co-expression partner lists, ~15 min
 Rscript tests/testthat.R
 ```
 
@@ -70,6 +71,7 @@ Rscript tests/testthat.R
 1. **Catalogue.** Add a row to `catalogue/maize_N_rnaseq_studies.tsv` with a new `study_id`
    (FirstAuthorYear). For unpublished lab data add a column `private` and set it to `TRUE`;
    `MAIZEXPRESSN_PUBLIC=1 Rscript analysis/pool_meta.R` and `MAIZEXPRESSN_PUBLIC=1 Rscript app/prepare_data.R`
+   (then `Rscript app/prepare_partners.R`, which reads the app data)
    then leave it out of a public deployment.
 2. **Accessions and runs.** Record the accession in `metadata/accessions_resolved.tsv`, then run
    `build_runs.py`. Lab data that is not in a public repository needs its runs added by hand
@@ -86,7 +88,7 @@ Rscript tests/testthat.R
    `salmon.merged.gene_counts.tsv`, `gene_tpm.tsv`, `gene_lengths.tsv` and the MultiQC report to `results/<study_id>/`.
 6. **QC.** Run `pipeline/library_qc.py` on Hazel into `metadata/library_qc.tsv`, then `library_exclusions.py`.
    Drop the study if it fails the reliability rules in `CLAUDE.md`.
-7. **Analyse and publish.** `de_per_study.R`, `pool_meta.R`, `app/prepare_data.R`, then the tests.
+7. **Analyse and publish.** `de_per_study.R`, `pool_meta.R`, `app/prepare_data.R`, `app/prepare_partners.R`, then the tests.
 
 ## Conventions
 
