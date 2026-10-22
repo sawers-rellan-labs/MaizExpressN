@@ -1,5 +1,5 @@
 # MaizExpressN
-
+[![DOI](https://zenodo.org)]([https://doi.org](https://doi.org/10.5281/zenodo.23577994)) 
 Look up a maize gene and see how its expression responds to nitrogen across published RNA-seq
 studies, study by study and pooled across studies by tissue, contrast class, growth system,
 stage and genotype. GEMMA Lab, NC State (Rubén Rellán-Álvarez).
