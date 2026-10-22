@@ -33,6 +33,10 @@ forest_plot <- function(e, sign) {
   e <- copy(e)
   e[, `:=`(x = sign * log2fc, ci = fifelse(is.finite(lfc_se), 1.96 * lfc_se, NA_real_),
            cls = factor(contrast_class, levels = CLASSES), tis = factor(tissue_group, levels = TISSUES))]
+  # replicated estimates without a p-value are not pooled: carried by one library, or a DESeq2 Cook's outlier
+  e[, style := fifelse(!replicated, "unrep", fifelse(is.finite(lfc_se) & is.na(pvalue), "nopool", "rep"))]
+  e[, why := fifelse(style != "nopool", "", fifelse(single_library %in% TRUE, "<br><i>carried by one library: no p-value, not pooled</i>",
+                                                    "<br><i>DESeq2 outlier (Cook's distance): no p-value, not pooled</i>"))]
   setorder(e, tis, cls, study_id, time_h)
   e[, row := .I]
   e[, lab := make.unique(short_label(.SD), sep = " #")]
@@ -42,17 +46,18 @@ forest_plot <- function(e, sign) {
                       ifelse(is.na(time_h), "", paste0("<br>time ", hrs(time_h))),
                       "<br>", sign_lab(sign), " = ", fmt(x),
                       ifelse(is.na(ci), " (no SE)", paste0(" [", fmt(x - ci), ", ", fmt(x + ci), "]")),
-                      "<br>padj = ", fmtp(padj), " · n = ", n_num_used, " vs ", n_den_used)]
+                      "<br>padj = ", fmtp(padj), " · n = ", n_num_used, " vs ", n_den_used, why)]
   lim <- min(10, max(2, ceiling(max(abs(e$x) + ifelse(is.na(e$ci), 0, e$ci), na.rm = TRUE) + 0.3)))
   p <- plot_ly(height = max(220, 18 * nrow(e) + 60))
-  for (cl in intersect(CLASSES, unique(e$contrast_class))) for (rep in c(TRUE, FALSE)) {
-    d <- e[contrast_class == cl & replicated == rep]
+  for (cl in intersect(CLASSES, unique(e$contrast_class))) for (st in c("rep", "unrep", "nopool")) {
+    d <- e[contrast_class == cl & style == st]
     if (!nrow(d)) next
     p <- add_trace(p, data = d, x = ~x, y = ~row, type = "scatter", mode = "markers", name = CLASS_LABEL[cl],
                    showlegend = FALSE,
-                   error_x = list(type = "data", array = d$ci, color = CLASS_COL[[cl]], thickness = 1.6, width = 3),
-                   marker = list(color = if (rep) CLASS_COL[[cl]] else "white", size = 9, symbol = "circle",
-                                 line = list(color = CLASS_COL[[cl]], width = 1.6)),
+                   error_x = list(type = "data", array = d$ci, color = CLASS_COL[[cl]], thickness = if (st == "nopool") 1 else 1.6, width = 3),
+                   marker = list(color = if (st == "unrep") "white" else CLASS_COL[[cl]], size = 9,
+                                 symbol = if (st == "nopool") "x" else "circle",
+                                 line = list(color = if (st == "nopool") "white" else CLASS_COL[[cl]], width = if (st == "nopool") 0.8 else 1.6)),
                    text = ~hover, hoverinfo = "text")
   }
   tis_breaks <- e[, .(start = min(row), end = max(row)), by = tis]
@@ -130,9 +135,11 @@ tc_plot <- function(e, sign) {
     l <- unique(e$line)[i]; d <- e[line == l][order(time_h)]
     p <- add_trace(p, data = d, x = ~time_h, y = ~x, type = "scatter", mode = "lines+markers", name = l,
                    line = list(color = pal[(i - 1) %% 6 + 1], width = 2),
-                   marker = list(color = pal[(i - 1) %% 6 + 1], size = 8, symbol = ifelse(d$replicated, "circle", "circle-open")),
+                   marker = list(color = pal[(i - 1) %% 6 + 1], size = 8,
+                                 symbol = ifelse(!d$replicated, "circle-open", ifelse(is.finite(d$lfc_se) & is.na(d$pvalue), "x", "circle"))),
                    error_y = list(type = "data", array = d$ci, color = pal[(i - 1) %% 6 + 1], thickness = 1, width = 3),
-                   hovertext = ~paste0(line, "<br>", hrs(time_h), " · ", fmt(x), "<br>padj ", fmtp(padj)), hoverinfo = "text")
+                   hovertext = ~paste0(line, "<br>", hrs(time_h), " · ", fmt(x), "<br>padj ", fmtp(padj),
+                                       ifelse(single_library %in% TRUE, "<br><i>carried by one library</i>", "")), hoverinfo = "text")
   }
   tv <- c(5/60, 15/60, 0.5, 1, 2, 4, 8, 24, 48, 96, 168, 336, 720, 1440)
   tv <- tv[tv >= min(e$time_h) / 1.5 & tv <= max(e$time_h) * 1.5]
@@ -170,5 +177,6 @@ volcano_plot <- function(m, sign) {
 class_legend <- function(classes = CLASSES) {
   htmltools::span(class = "legend", lapply(classes, function(cl)
     htmltools::span(class = "lg", htmltools::span(class = "sw", style = paste0("background:", CLASS_COL[[cl]])), CLASS_LABEL[[cl]])),
-    htmltools::span(class = "lg", htmltools::span(class = "sw open"), "unreplicated"))
+    htmltools::span(class = "lg", htmltools::span(class = "sw open"), "unreplicated"),
+    htmltools::span(class = "lg", htmltools::span(class = "sw x", "\u00d7"), "not pooled (one library or outlier)"))
 }

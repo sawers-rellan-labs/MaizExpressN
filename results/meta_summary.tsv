@@ -1,34 +1,34 @@
 filter_set	tissue_group	contrast_class	genes	max_k_studies	genes_k2plus	sig_k2plus
-B73	Leaf	deficiency	24461	2	19597	877
-B73	Leaf	field_rate	27696	1	0	0
-B73	Leaf	resupply	26016	1	0	0
-B73	Leaf	starvation	26016	1	0	0
-B73	Root	deficiency	28498	4	26133	373
-B73	Root	form	23526	1	0	0
-B73	Root	local	28194	3	22941	443
-B73	Root	resupply	30153	8	28386	198
-B73	Root	starvation	26016	1	0	0
-B73	Shoot	resupply	28003	2	22829	166
-B73	Whole seedling	excess	26495	1	0	0
-all	Leaf	deficiency	30100	6	27908	999
+B73	Leaf	deficiency	24455	2	19593	875
+B73	Leaf	field_rate	26820	1	0	0
+B73	Leaf	resupply	25812	1	0	0
+B73	Leaf	starvation	25671	1	0	0
+B73	Root	deficiency	28433	4	26077	369
+B73	Root	form	23463	1	0	0
+B73	Root	local	27694	3	22815	442
+B73	Root	resupply	30036	8	28195	155
+B73	Root	starvation	25975	1	0	0
+B73	Shoot	resupply	27875	2	22724	149
+B73	Whole seedling	excess	25869	1	0	0
+all	Leaf	deficiency	30031	6	27778	981
 all	Leaf	field_rate	27696	1	0	0
-all	Leaf	resupply	29326	2	24726	1085
-all	Leaf	starvation	29326	2	24726	933
-all	Root	deficiency	30344	7	28654	543
-all	Root	form	27603	2	22260	187
-all	Root	local	28194	3	22941	443
-all	Root	resupply	32172	11	29850	282
-all	Root	starvation	29326	2	24726	264
-all	Shoot	deficiency	27425	1	0	0
-all	Shoot	form	26337	1	0	0
-all	Shoot	resupply	28003	2	22829	166
-all	Whole seedling	excess	26495	1	0	0
-all	Whole seedling	resupply	24828	1	0	0
-B73	Leaf	all_levels	30454	4	25699	393
-B73	Root	all_levels	31082	14	29105	213
-B73	Shoot	all_levels	28003	2	22829	166
-B73	Whole seedling	all_levels	26495	1	0	0
-all	Leaf	all_levels	32205	9	29995	786
-all	Root	all_levels	32823	20	31000	334
-all	Shoot	all_levels	29565	3	26307	265
-all	Whole seedling	all_levels	27765	2	23558	287
+all	Leaf	resupply	29230	2	24447	1078
+all	Leaf	starvation	29252	2	24329	875
+all	Root	deficiency	30319	7	28571	547
+all	Root	form	27524	2	22217	185
+all	Root	local	27694	3	22815	442
+all	Root	resupply	32101	11	29725	262
+all	Root	starvation	29299	2	24668	265
+all	Shoot	deficiency	26603	1	0	0
+all	Shoot	form	26294	1	0	0
+all	Shoot	resupply	27875	2	22724	149
+all	Whole seedling	excess	26371	1	0	0
+all	Whole seedling	resupply	24811	1	0	0
+B73	Leaf	all_levels	29932	4	25445	350
+B73	Root	all_levels	31008	14	28995	194
+B73	Shoot	all_levels	27875	2	22724	149
+B73	Whole seedling	all_levels	25869	1	0	0
+all	Leaf	all_levels	32192	9	29950	767
+all	Root	all_levels	32795	20	30944	332
+all	Shoot	all_levels	29372	3	26009	253
+all	Whole seedling	all_levels	27703	2	23479	322

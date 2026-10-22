@@ -1,9 +1,12 @@
 # Pooling on the fly for the current filters: within a study, contrasts sharing the grouping
 # are combined by inverse variance; across studies, DerSimonian-Laird random effects.
 # Same maths as analysis/pool_meta.R (checked against metafor in tests/test_pooling.R).
+# As there, genes without a p-value are not pooled: fold changes carried by one library
+# (single_library) and DESeq2 Cook's outliers.
 
 pool_dl <- function(d, keys) {
   d <- d[is.finite(lfc_se) & lfc_se > 0 & is.finite(log2fc)]
+  if ("pvalue" %in% names(d)) d <- d[!is.na(pvalue)]
   if (!nrow(d)) return(data.table())
   by_s <- c(keys, "study_id"); d <- copy(d); d[, w := 1 / lfc_se^2]
   s <- d[, .(y = sum(w * log2fc) / sum(w), v = 1 / sum(w), nc = .N), by = by_s]

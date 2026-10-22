@@ -224,7 +224,7 @@ server <- function(input, output, session) {
           pool_dl(e[contrast_class %in% LEVEL_CLASSES][, contrast_class := "all_levels"], c("tissue_group", "contrast_class")))
   })
   output$pooled <- renderPlotly(pooled_plot(pooled(), sign()))
-  output$pooled_note <- renderUI(p(class = "hint", "Contrasts are combined within each study first. Unreplicated and display-only contrasts are left out. Faint diamonds rest on one study. “All N levels” pools every class except N form."))
+  output$pooled_note <- renderUI(p(class = "hint", "Contrasts are combined within each study first. Unreplicated and display-only contrasts are left out, and so are estimates marked × (carried by one library, or a DESeq2 outlier). Faint diamonds rest on one study. “All N levels” pools every class except N form."))
 
   # ---- expression
   observeEvent(gene(), {
@@ -260,7 +260,7 @@ server <- function(input, output, session) {
         `lower N` = N_numerator, `higher N` = N_denominator, time = hrs(time_h), n = paste0(n_num_used, "/", n_den_used),
         log2FC = round(sign() * log2fc, 3), SE = round(lfc_se, 3), padj = signif(padj, 3),
         `TPM lower N` = round(tpm_numerator_mean, 2), `TPM higher N` = round(tpm_denominator_mean, 2),
-        replicated, pooled = pool & replicated, doi = doi_url)]
+        replicated, `one library` = single_library %in% TRUE, pooled = pool & replicated & !is.na(pvalue), doi = doi_url)]
   })
   output$restable <- renderDT(datatable(res_tab()[, !"doi"], rownames = FALSE, class = "compact stripe",
                                         options = list(pageLength = 15, scrollX = TRUE, dom = "ftip")))

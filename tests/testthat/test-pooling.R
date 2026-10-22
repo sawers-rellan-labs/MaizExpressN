@@ -3,9 +3,9 @@
 test_that("pooled estimates, SE, tau2 and I2 match metafor on sample genes", {
   skip_if_not_installed("metafor")
   cons <- tsv("metadata", "contrasts.tsv")
-  de <- pq("results", "de.parquet")[, .(gene_id, contrast_id, study_id, log2fc, lfc_se)]
+  de <- pq("results", "de.parquet")[, .(gene_id, contrast_id, study_id, log2fc, lfc_se, pvalue)]
   de <- de[cons[pool == "TRUE", .(contrast_id, contrast_class, tissue_group)], on = "contrast_id", nomatch = 0]
-  de <- de[is.finite(lfc_se) & lfc_se > 0 & is.finite(log2fc)]
+  de <- de[is.finite(lfc_se) & lfc_se > 0 & is.finite(log2fc) & !is.na(pvalue)]   # no p-value: one library or Cook's outlier
   meta <- pq("results", "meta_tissue_class.parquet")[filter_set == "all"]
   set.seed(1)
   genes <- c(unname(GENE), meta[k_studies >= 3, .N, by = gene_id][sample(.N, 6), gene_id])

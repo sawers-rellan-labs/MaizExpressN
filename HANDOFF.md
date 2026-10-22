@@ -202,7 +202,7 @@ contrast_id, study_id, contrast_class, numerator_group, denominator_group, held_
 study_id, item, question, proposed_answer, evidence
 
 **`results/de.parquet`** (one row per gene × contrast)
-gene_id, contrast_id, study_id, base_mean, log2fc, lfc_se, log2fc_shrunk, stat, pvalue, padj, tpm_numerator_mean, tpm_denominator_mean, replicated
+gene_id, contrast_id, study_id, base_mean, log2fc, lfc_se, log2fc_shrunk, stat, pvalue, padj, single_library, tpm_numerator_mean, tpm_denominator_mean, replicated
 
 **`results/tpm.parquet`** (long format, partitioned by study)
 gene_id, sample_id, study_id, tpm, est_count

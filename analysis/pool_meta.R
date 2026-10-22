@@ -4,7 +4,9 @@
 #
 # Input: results/de.parquet (analysis/de_per_study.R) and metadata/contrasts.tsv.
 # Only replicated contrasts with pool = TRUE and a finite lfcSE enter pooling (unreplicated and
-# display-only contrasts are shown in the app but never pooled; counts are never pooled).
+# display-only contrasts are shown in the app but never pooled; counts are never pooled). Within them,
+# genes without a p-value are left out: fold changes carried by one library (single_library) and
+# DESeq2 Cook's outliers.
 #  1. Within a study, contrasts sharing the grouping (tissue group x class) are combined by
 #     inverse variance, so a long time course or many genotypes count as one study estimate.
 #  2. Across studies, DerSimonian-Laird random effects (vectorised over genes).
@@ -39,9 +41,10 @@ cons[, all_b73 := vapply(paste(numerator_samples, denominator_samples, sep = ";"
                          function(x) all(setdiff(strsplit(x, ";", fixed = TRUE)[[1]], "") %in% b73), logical(1))]
 
 de <- as.data.table(read_parquet("results/de.parquet",
-                                 col_select = c("gene_id", "contrast_id", "study_id", "log2fc", "lfc_se", "padj")))
+                                 col_select = c("gene_id", "contrast_id", "study_id", "log2fc", "lfc_se", "pvalue", "padj",
+                                                "single_library")))
 de <- de[cons[, .(contrast_id, contrast_class, tissue_group, pool, all_b73)], on = "contrast_id", nomatch = 0]
-de <- de[pool == "TRUE" & is.finite(lfc_se) & lfc_se > 0 & is.finite(log2fc)]
+de <- de[pool == "TRUE" & is.finite(lfc_se) & lfc_se > 0 & is.finite(log2fc) & !is.na(pvalue) & !(single_library %in% TRUE)]
 de[, dir := fifelse(!is.na(padj) & padj < PADJ & log2fc >= LFC, 1L,
                fifelse(!is.na(padj) & padj < PADJ & log2fc <= -LFC, -1L, 0L))]
 message(sprintf("%d gene x contrast rows from %d contrasts in %d studies enter pooling",

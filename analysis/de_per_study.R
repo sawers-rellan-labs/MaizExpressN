@@ -15,9 +15,17 @@
 # Unshrunk log2FC and lfcSE are kept for pooling; ashr-shrunk log2FC is for display (apeglm
 # cannot shrink arbitrary contrasts). Unreplicated contrasts get the log2 ratio of mean
 # normalised counts (+0.5) and no SE, p or padj.
+# single_library (replicated contrasts; Rubén, 22 Oct 2026): the fold change rests on one library.
+# TRUE when one library holds more than 90% of the gene's normalised counts across the contrast's
+# libraries, or, for a gene with padj < 0.05, when the higher condition without its top library is
+# no higher than the lower condition (mean normalised counts). DESeq2's Cook's filter misses these
+# when the gene's dispersion is large (0, 0, 96 vs 0, 0, 0 counts gave log2FC 22, padj 1e-10).
+# Like Cook's outliers, flagged genes get pvalue and padj NA (other genes' padj is unchanged);
+# log2FC, SE and shrunk log2FC stay for display. Pooling leaves out every replicated row without a
+# p-value, so neither flagged genes nor Cook's outliers are pooled.
 #
 # Outputs: results/de.parquet (gene x contrast; schema in HANDOFF section 5) and
-# results/de_summary.tsv (one row per contrast: samples used, genes tested, DEG counts).
+# results/de_summary.tsv (one row per contrast: samples used, genes tested, DEG counts, single_library genes).
 
 suppressPackageStartupMessages({
   library(DESeq2)
@@ -30,6 +38,7 @@ options(warn = 1)
 NO_LENGTH <- c("Huang2025")       # 3' tag-seq: no length offsets
 PADJ_DEG <- 0.05; LFC_DEG <- 1      # DEG call for the summary table only
 MIN_COUNT <- 10                    # a gene is tested if >= MIN_COUNT reads in >= MIN_SAMPLES samples
+SPIKE_SHARE <- 0.9; SPIKE_PADJ <- 0.05   # single_library rule (see header)
 GROUP_KEY <- c("study_id", "genotype", "tissue_group", "tissue_detail", "N_label_paper",
                "N_form", "N_amount", "N_unit", "N_rank_in_study", "phase", "time_h",
                "other_factor", "other_factor_level")
@@ -41,6 +50,17 @@ samples[, group := do.call(paste, c(.SD, sep = "|")), .SDcols = GROUP_KEY]
 use <- samples[include == "TRUE" & !(sample_id %in% excl$sample_id)]
 
 split_ids <- function(x) setdiff(strsplit(x, ";", fixed = TRUE)[[1]], "")
+
+# N, D: normalised counts (genes x libraries) of the numerator and denominator; see the header
+is_single_library <- function(N, D, lfc, padj) {
+  sn <- rowSums(N); sd_ <- rowSums(D); mn <- apply(N, 1, max); md <- apply(D, 1, max)
+  share <- pmax(mn, md) / (sn + sd_)
+  up <- lfc > 0
+  rest_hi <- ifelse(up, (sn - mn) / (ncol(N) - 1), (sd_ - md) / (ncol(D) - 1))   # higher condition without its top library
+  lo <- ifelse(up, sd_ / ncol(D), sn / ncol(N))
+  flag <- (sn + sd_ > 0 & share > SPIKE_SHARE) | (!is.na(padj) & padj < SPIKE_PADJ & rest_hi <= lo)
+  flag %in% TRUE
+}
 
 # gene x sample matrices from each owning study's nf-core tables, cached
 FILES <- c(counts = "salmon.merged.gene_counts.tsv", lengths = "salmon.merged.gene_lengths.tsv",
@@ -114,11 +134,14 @@ run_study <- function(st) {
       d <- data.table(gene_id = rownames(res), base_mean = res$baseMean, log2fc = res$log2FoldChange,
                       lfc_se = res$lfcSE, log2fc_shrunk = sh$log2FoldChange, stat = res$stat,
                       pvalue = res$pvalue, padj = res$padj)
+      d[, single_library := is_single_library(ncounts[gene_id, num, drop = FALSE], ncounts[gene_id, den, drop = FALSE],
+                                           log2fc, padj)]
+      d[single_library == TRUE, `:=`(pvalue = NA_real_, padj = NA_real_)]
     } else {
       a <- rowMeans(ncounts[, num, drop = FALSE]); b <- rowMeans(ncounts[, den, drop = FALSE])
       d <- data.table(gene_id = rownames(ncounts), base_mean = rowMeans(ncounts[, c(num, den), drop = FALSE]),
                       log2fc = log2((a + 0.5) / (b + 0.5)), lfc_se = NA_real_, log2fc_shrunk = NA_real_,
-                      stat = NA_real_, pvalue = NA_real_, padj = NA_real_)
+                      stat = NA_real_, pvalue = NA_real_, padj = NA_real_, single_library = NA)
     }
     tp <- tpm[d$gene_id, , drop = FALSE]
     d[, `:=`(contrast_id = c1$contrast_id, study_id = st,
@@ -132,6 +155,7 @@ run_study <- function(st) {
       excluded_libraries = paste(dropped, collapse = ";"), genes_tested = nrow(d),
       n_up = if (rep_ok) d[padj < PADJ_DEG & log2fc >= LFC_DEG, .N] else NA_integer_,
       n_down = if (rep_ok) d[padj < PADJ_DEG & log2fc <= -LFC_DEG, .N] else NA_integer_,
+      n_single_library = if (rep_ok) d[single_library == TRUE, .N] else NA_integer_,
       note = if (replicated_fit) "" else "study has no replicates: log2 ratio of normalised counts")
   }
   list(de = rbindlist(out), summary = rbindlist(summ, fill = TRUE))
@@ -154,7 +178,7 @@ for (st in studies) {
 de <- rbindlist(res, use.names = TRUE)
 summary <- rbindlist(summ, fill = TRUE)
 setcolorder(de, c("gene_id", "contrast_id", "study_id", "base_mean", "log2fc", "lfc_se", "log2fc_shrunk",
-                  "stat", "pvalue", "padj", "tpm_numerator_mean", "tpm_denominator_mean", "replicated"))
+                  "stat", "pvalue", "padj", "single_library", "tpm_numerator_mean", "tpm_denominator_mean", "replicated"))
 if (length(args)) {
   for (st in names(res)) write_parquet(res[[st]], file.path("results", paste0("de_", st, ".parquet")))
 } else {
