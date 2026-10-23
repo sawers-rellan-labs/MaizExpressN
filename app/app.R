@@ -59,6 +59,9 @@ lookup_page <- nav_panel(
          plotlyOutput("expr", height = "auto"), uiOutput("expr_note")),
     card(full_screen = TRUE, card_header("Time courses"),
          selectInput("tc_study", NULL, choices = NULL), plotlyOutput("tc", height = "auto"))),
+  card(full_screen = TRUE, card_header("Baseline expression in B73", span(class = "hint", textOutput("atlas_hint", inline = TRUE))),
+       input_switch("atlas_log", "log scale", TRUE), plotlyOutput("atlas", height = "auto"),
+       p(class = "hint", "MaizeGDB expression atlas via MaizeMine: mean FPKM per tissue and stage in B73, under standard growth conditions (no N treatment). Hover a bar for the tissue; 0 FPKM has no bar on the log scale.")),
   card(card_header("Results table", downloadButton("dl_gene", "Download CSV", class = "btn-sm")), DTOutput("restable"))
 )
 
@@ -206,6 +209,11 @@ server <- function(input, output, session) {
           tags$dt("v4 / v3"), tags$dd(class = "mono", paste(c(if (nzchar(g$v4_ids)) g$v4_ids else "–", if (nzchar(g$v3_ids)) g$v3_ids else "–"), collapse = " / ")),
           tags$dt("Arabidopsis"), tags$dd(if (nzchar(g$ath_best_hit)) tagList(span(class = "mono", g$ath_best_hit), if (nzchar(g$ath_symbol)) paste0(" ", g$ath_symbol),
                                           if (lengths(strsplit(g$ath_orthologs, ",")) > 1) span(class = "muted", paste0("  (orthologs: ", gsub(",", ", ", g$ath_orthologs), ")"))) else span(class = "muted", "no Ensembl ortholog")),
+          tags$dt("Pathways"), tags$dd(pathway_list(PATHWAYS[.(g$gene_id), nomatch = 0])),
+          tags$dt("GWAS hits"), tags$dd(gwas_list(GWAS_HITS[.(g$gene_id), nomatch = 0])),
+          tags$dt("Variants"), tags$dd(variant_summary(VARIANTS[.(g$gene_id), nomatch = 0], g$gene_id)),
+          tags$dt("Pan-genome"), tags$dd(pangene_presence(PANGENES[.(g$gene_id), nomatch = 0]), " ", pangene_strip(PANGENES[.(g$gene_id), nomatch = 0])),
+          tags$dt("Literature"), tags$dd(literature_list(LITERATURE[.(g$gene_id), nomatch = 0], g$gene_id)),
           if (length(gos)) tagList(tags$dt("GO"), tags$dd(class = "small", paste(head(paste0(go_name[gos], " (", gos, ")"), 6), collapse = "; "),
                                                          if (length(gos) > 6) span(class = "muted", sprintf(" … %d more", length(gos) - 6)))))),
       div(class = "stats",
@@ -217,6 +225,9 @@ server <- function(input, output, session) {
   })
 
   output$forest <- renderPlotly(forest_plot(est(), sign()))
+  atlas_x <- reactive(get_atlas(gene()))
+  output$atlas <- renderPlotly(atlas_plot(atlas_x(), isTRUE(input$atlas_log)))
+  output$atlas_hint <- renderText(atlas_summary(atlas_x()))
 
   pooled <- reactive({
     e <- est()[pool == TRUE & replicated == TRUE]
@@ -379,8 +390,19 @@ server <- function(input, output, session) {
     })
 
   # ---- gene list
-  gl <- eventReactive(input$gl_go, ignoreNULL = FALSE, {
-    r <- resolve_tokens(strsplit(input$gl_text, "[\\s,;]+", perl = TRUE)[[1]])
+  # the gene list comes from the text box (Show heatmap) or from a pathway link on the gene card
+  gl_req <- reactiveVal(NULL)
+  observeEvent(input$gl_go, gl_req(list(tokens = strsplit(input$gl_text, "[\\s,;]+", perl = TRUE)[[1]])), ignoreNULL = FALSE)
+  observeEvent(input$pw_pick, {
+    ids <- PATHWAYS[pathway_id == input$pw_pick, unique(gene_id)]
+    if (!length(ids)) return()
+    updateTextAreaInput(session, "gl_text", value = paste(ids, collapse = "\n"))
+    gl_req(list(tokens = ids, exact = TRUE))   # gene IDs as listed, not alias search
+    nav_select("nav", "genelist")
+  })
+  gl <- eventReactive(gl_req(), {
+    q <- gl_req()
+    r <- if (isTRUE(q$exact)) list(genes = q$tokens, missing = character()) else resolve_tokens(q$tokens)
     if (!length(r$genes)) return(list(r = r, Z = data.table(), hov = NULL))
     d <- get_de_many(head(r$genes, 300)); d[, study_id := NULL]
     d <- allowed()[d, on = "contrast_id", nomatch = 0][pool == TRUE & replicated == TRUE]

@@ -18,6 +18,10 @@
 #   app/data/meta_tissue_class.parquet, meta_tissue_level.parquet       (pooling, M6)
 #   app/data/de/<bucket>.parquet   results/de.parquet split by gene bucket
 #   app/data/tpm/<bucket>.parquet  gene x sample TPM and estimated counts (included, non-excluded samples)
+#   app/data/pathways, gwas_hits, variants, pangenes .parquet and maizemine_release.json   MaizeMine extras
+#                                for the gene card (annotation/fetch_maizemine.py, then annotation/build_parquet.R)
+#   app/data/atlas/<bucket>.parquet, atlas_samples.parquet   B73 expression atlas (MaizeMine)
+#   app/data/literature.parquet   gene-specific papers (annotation/fetch_literature.py, NCBI gene2pubmed)
 # Then run app/prepare_partners.R: it builds app/data/partners/ (co-expression partner lists) from these tables.
 
 suppressPackageStartupMessages({ library(data.table); library(arrow) })
@@ -113,6 +117,24 @@ de[, b := bucket(gene_id)]
 for (bb in unique(de$b))
   write_parquet(de[b == bb][, b := NULL], file.path(out, "de", paste0(bb, ".parquet")))
 message(sprintf("de: %d rows in %d buckets", nrow(de), uniqueN(de$b)))
+
+# MaizeMine extras for the gene card (small tables, copied whole)
+if (file.exists("annotation/pangenes.parquet")) {
+  for (f in c("pathways", "gwas_hits", "variants", "pangenes"))
+    file.copy(file.path("annotation", paste0(f, ".parquet")), file.path(out, paste0(f, ".parquet")), overwrite = TRUE)
+  file.copy("annotation/source/maizemine/release.json", file.path(out, "maizemine_release.json"), overwrite = TRUE)
+  message("maizemine: pathways, GWAS hits, variants and pan-genes copied")
+}
+if (file.exists("annotation/atlas.parquet")) {   # B73 atlas split by gene bucket; samples whole
+  dir.create(file.path(out, "atlas"), showWarnings = FALSE)
+  unlink(Sys.glob(file.path(out, "atlas", "*.parquet")))
+  a <- as.data.table(read_parquet("annotation/atlas.parquet"))[, b := bucket(gene_id)]
+  for (bb in unique(a$b)) write_parquet(a[b == bb][, b := NULL], file.path(out, "atlas", paste0(bb, ".parquet")))
+  file.copy("annotation/atlas_samples.parquet", file.path(out, "atlas_samples.parquet"), overwrite = TRUE)
+  message(sprintf("atlas: %d values in %d buckets", nrow(a), uniqueN(a$b)))
+}
+if (file.exists("annotation/literature.parquet"))
+  file.copy("annotation/literature.parquet", file.path(out, "literature.parquet"), overwrite = TRUE)
 
 for (f in c("meta_tissue_class", "meta_tissue_level"))
   file.copy(file.path("results", paste0(f, ".parquet")), file.path(out, paste0(f, ".parquet")), overwrite = TRUE)

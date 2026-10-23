@@ -41,3 +41,33 @@ test_that("excluded libraries never reach the app", {
   s <- pq("app", "data", "samples.parquet")
   expect_length(intersect(ex$sample_id, s$sample_id), 0)
 })
+
+test_that("MaizeMine gene-card tables are present and consistent", {
+  d <- file.path(ROOT, "app", "data")
+  skip_if_not(file.exists(file.path(d, "pangenes.parquet")), "MaizeMine tables not built")
+  rd <- function(f) data.table::as.data.table(arrow::read_parquet(file.path(d, f)))
+  pw <- rd("pathways.parquet"); gh <- rd("gwas_hits.parquet"); v <- rd("variants.parquet"); pg <- rd("pangenes.parquet")
+  expect_true(all(grepl("^Zm00001eb[0-9]{6}$", c(pw$gene_id, gh$gene_id, v$gene_id, pg$gene_id))))
+  expect_true("PWY-381" %in% pw[gene_id == GENE[["nii1"]], pathway_id])           # nitrate reduction II
+  expect_true(all(pg$genomes_present >= 1 & pg$genomes_present <= pg$n_genomes))
+  expect_equal(anyDuplicated(pg$gene_id), 0L)
+  expect_true(all(gh$distance_bp >= 0 & gh$distance_bp <= 10000))
+  expect_true(all(v$missense_deleterious <= v$missense))
+  expect_true(file.exists(file.path(d, "maizemine_release.json")))
+})
+
+test_that("B73 atlas and literature tables are present and consistent", {
+  d <- file.path(ROOT, "app", "data")
+  skip_if_not(file.exists(file.path(d, "atlas_samples.parquet")), "atlas not built")
+  smp <- data.table::as.data.table(arrow::read_parquet(file.path(d, "atlas_samples.parquet")))
+  expect_true(all(startsWith(smp$sample, "B73")))
+  expect_equal(sort(smp$order), seq_len(nrow(smp)))
+  a <- data.table::as.data.table(arrow::read_parquet(file.path(d, "atlas", paste0(substr(GENE[["nii1"]], 10, 12), ".parquet"))))
+  a <- a[gene_id == GENE[["nii1"]]]
+  expect_equal(nrow(a), nrow(smp))                                 # one value per atlas sample
+  expect_true(all(a$sample %in% smp$sample) && all(a$fpkm >= 0, na.rm = TRUE))
+  lit <- data.table::as.data.table(arrow::read_parquet(file.path(d, "literature.parquet")))
+  expect_true(all(lit$n_genes <= 10) && all(grepl("^[0-9]+$", lit$pmid)))
+  expect_gte(lit[gene_id == GENE[["nnr1"]], .N], 3)                  # corn nitrate reductase papers
+  expect_equal(anyDuplicated(lit[, .(gene_id, pmid)]), 0L)
+})

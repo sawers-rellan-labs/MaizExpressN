@@ -17,8 +17,18 @@ STUDIES   <- rp("studies.parquet")
 META_TC   <- rp("meta_tissue_class.parquet")
 META_TL   <- rp("meta_tissue_level.parquet")
 BUILT     <- tryCatch(readLines(file.path(DATA_DIR, "BUILT"))[1], error = function(e) "")
+# MaizeMine extras for the gene card (annotation/fetch_maizemine.py); empty tables in older data builds
+rp_opt <- function(f) if (file.exists(file.path(DATA_DIR, f))) rp(f) else data.table(gene_id = character())
+PATHWAYS  <- rp_opt("pathways.parquet")
+GWAS_HITS <- rp_opt("gwas_hits.parquet")
+VARIANTS  <- rp_opt("variants.parquet")
+PANGENES  <- rp_opt("pangenes.parquet")
+LITERATURE <- rp_opt("literature.parquet")                    # gene-specific papers (NCBI gene2pubmed)
+ATLAS_SAMPLES <- if (file.exists(file.path(DATA_DIR, "atlas_samples.parquet"))) rp("atlas_samples.parquet") else data.table()
+MAIZEMINE <- tryCatch(jsonlite::fromJSON(file.path(DATA_DIR, "maizemine_release.json")), error = function(e) list())
 setkey(GENES, gene_id)
 setkey(ALIASES, alias_lower)
+for (x in list(PATHWAYS, GWAS_HITS, VARIANTS, PANGENES, LITERATURE)) setkey(x, gene_id)
 go_name <- setNames(GO_TERMS$go_name, GO_TERMS$go_id)
 
 CLASSES <- c("deficiency", "starvation", "resupply", "excess", "field_rate", "local", "form")
@@ -52,6 +62,15 @@ get_tpm <- function(gid) {
   if (!file.exists(f)) return(data.table())
   as.data.table(arrow::read_parquet(f))[gene_id == gid]
 }
+
+# B73 expression atlas (MaizeMine; mean FPKM per sample), split by gene bucket like the DE tables
+get_atlas <- function(gid) {
+  f <- file.path(DATA_DIR, "atlas", paste0(bucket(gid), ".parquet"))
+  if (!file.exists(f)) return(data.table())
+  as.data.table(arrow::read_parquet(f))[gene_id == gid]
+}
+MAIZEMINE_URL <- "https://maizemine.rnet.missouri.edu/maizemine/portal.do"
+maizemine_link <- function(id, class) paste0(MAIZEMINE_URL, "?externalids=", utils::URLencode(id, reserved = TRUE), "&class=", class)
 
 # strongest co-expression partners (app/prepare_partners.R); partner IDs are stored as their number
 get_partners <- function(gid) {

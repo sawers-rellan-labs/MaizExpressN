@@ -3,6 +3,8 @@
 # build a search index of every identifier and name.
 #   Rscript annotation/build_parquet.R
 # Writes annotation/genes.parquet, annotation/go_terms.parquet and annotation/gene_aliases.parquet
+# (and, once annotation/fetch_maizemine.py and fetch_literature.py have run, pathways, gwas_hits, variants,
+# pangenes, atlas, atlas_samples and literature .parquet)
 # (alias, alias_lower, alias_type, gene_id). Search = exact match on alias_lower; an alias that
 # maps to several genes returns all of them (v3 and v4 IDs often do).
 
@@ -41,4 +43,28 @@ print(aliases[, .N, by = alias_type])
 for (q in c("nii1", "NRT2.1", "nia1", "Zm00001d018161", "GRMZM2G102959", "gln1.3")) {
   hit <- aliases[alias_lower == tolower(q), unique(gene_id)]
   cat(sprintf("%-15s -> %s\n", q, paste(head(hit, 6), collapse = ", ")))
+}
+
+# MaizeMine extras (annotation/fetch_maizemine.py): pathways, GWAS hits near genes, protein-changing
+# variant counts and pan-gene presence, one Parquet each
+if (file.exists("annotation/pangenes.tsv")) {
+  for (f in c("pathways", "gwas_hits", "variants", "pangenes")) {
+    x <- fread(file.path("annotation", paste0(f, ".tsv")), na.strings = NULL,
+               colClasses = if (f == "gwas_hits") list(character = c("p_value", "r2", "pubmed")) else NULL)
+    if (f == "gwas_hits") x[, `:=`(p_value = as.numeric(p_value), r2 = as.numeric(r2))]
+    write_parquet(x, file.path("annotation", paste0(f, ".parquet")))
+    cat(sprintf("%s.parquet: %d rows, %d genes\n", f, nrow(x), uniqueN(x$gene_id)))
+  }
+}
+# B73 expression atlas (fetch_maizemine.py) and gene-specific literature (fetch_literature.py)
+if (file.exists("annotation/atlas.tsv.gz")) {
+  write_parquet(fread("annotation/atlas_samples.tsv", na.strings = NULL), "annotation/atlas_samples.parquet")
+  a <- fread(cmd = "gzip -dc annotation/atlas.tsv.gz", colClasses = c(fpkm = "numeric"))   # no R.utils needed
+  write_parquet(a, "annotation/atlas.parquet")
+  cat(sprintf("atlas.parquet: %d values, %d genes\n", nrow(a), uniqueN(a$gene_id)))
+}
+if (file.exists("annotation/literature.tsv")) {
+  l <- fread("annotation/literature.tsv", colClasses = c(pmid = "character", year = "character"), na.strings = NULL, quote = "")
+  write_parquet(l, "annotation/literature.parquet")
+  cat(sprintf("literature.parquet: %d gene-paper links, %d genes\n", nrow(l), uniqueN(l$gene_id)))
 }

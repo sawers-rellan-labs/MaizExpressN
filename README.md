@@ -62,7 +62,7 @@ python3 metadata/build/validate_contrasts.py
 python3 metadata/build/library_exclusions.py
 Rscript analysis/de_per_study.R
 Rscript analysis/pool_meta.R
-python3 annotation/build_genes.py && Rscript annotation/build_parquet.R
+python3 annotation/build_genes.py && python3 annotation/fetch_maizemine.py && python3 annotation/fetch_literature.py && Rscript annotation/build_parquet.R
 Rscript app/prepare_data.R
 Rscript app/prepare_partners.R   # co-expression partner lists, ~15 min
 Rscript tests/testthat.R

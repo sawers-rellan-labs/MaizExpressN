@@ -25,6 +25,10 @@ Two genes are compared in two ways. **Across samples**: within each study and ti
 ### Gene annotation
 MaizeGDB Zm00001eb.1 symbols, names, gene products and GO terms; v3/v4 cross-references from MaizeGDB; Arabidopsis orthologs and gene features from Ensembl Plants. Descriptions marked “predicted” come from MaizeGDB's EnTAP annotation.
 
+The gene card also shows data from MaizeMine, MaizeGDB's data warehouse (release and download date in the app data): metabolic pathways (MaizeGDB E2P2 pathways and Plant Reactome); GWAS hits within 10 kb of the gene, from the GWAS Atlas and the Wallace et al. 2014 NAM GWAS, listed by trait with the nearest hit first; protein-changing variants from the Ensembl Plants variant set (distinct stop-gained, frameshift, splice-site, start-lost and stop-lost variants, and missense variants with the number SIFT predicts deleterious, low-confidence calls included); and the gene's MaizeGDB pan-gene group, with the B73 and NAM founder genomes that have a copy. A GWAS hit near a gene is not evidence that the gene causes the trait.
+
+The pan-genome strip shows, for the B73 and 25 NAM founder genomes in order, whether the gene's pan-gene group has a copy there. **Literature** counts gene-specific papers from NCBI gene2pubmed: papers NCBI links to the gene, keeping only those linked to at most 10 maize genes, so genome-scale papers are left out. NCBI's links are incomplete, so the count is a lower bound. **Baseline expression** is the MaizeGDB B73 expression atlas from MaizeMine: mean FPKM per tissue and developmental stage under standard growth conditions, with no N treatment. It shows where a gene is normally expressed, not how it responds to N.
+
 ### Caveats
 - N levels are relative within a study; actual amounts and units are listed with every contrast.
 - Non-B73 genotypes are mapped to B73, which biases expression for divergent genes. Use “B73 only” to check.
